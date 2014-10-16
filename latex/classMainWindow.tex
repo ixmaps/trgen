@@ -1,0 +1,127 @@
+\hypertarget{classMainWindow}{
+\section{MainWindow Class Reference}
+\label{classMainWindow}\index{MainWindow@{MainWindow}}
+}
+{\tt \#include $<$MainWindow.h$>$}
+
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classMainWindow_4e20a4a065fbb0e4d3532a45a0a91425}{
+void \hyperlink{classMainWindow_4e20a4a065fbb0e4d3532a45a0a91425}{closeEvent} (QCloseEvent $\ast$event)}
+\label{classMainWindow_4e20a4a065fbb0e4d3532a45a0a91425}
+
+\begin{CompactList}\small\item\em invoked when request to close high-level window occurs \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Slots}
+\begin{CompactItemize}
+\item 
+\hypertarget{classMainWindow_09de6bdff902ebcdccee3a1dd715f69b}{
+void \hyperlink{classMainWindow_09de6bdff902ebcdccee3a1dd715f69b}{on\_\-action\_\-About\_\-triggered} ()}
+\label{classMainWindow_09de6bdff902ebcdccee3a1dd715f69b}
+
+\begin{CompactList}\small\item\em user activated About from menus \item\end{CompactList}\item 
+\hypertarget{classMainWindow_0b8c6952362faeeee64487be46b5ae6d}{
+void \hyperlink{classMainWindow_0b8c6952362faeeee64487be46b5ae6d}{on\_\-action\_\-Quit\_\-triggered} ()}
+\label{classMainWindow_0b8c6952362faeeee64487be46b5ae6d}
+
+\begin{CompactList}\small\item\em user activated Quit from menus \item\end{CompactList}\item 
+\hypertarget{classMainWindow_4e373cf10e2cff2bd2f9cf0de2e379bc}{
+void \hyperlink{classMainWindow_4e373cf10e2cff2bd2f9cf0de2e379bc}{on\_\-action\_\-TracerouteSingle\_\-triggered} ()}
+\label{classMainWindow_4e373cf10e2cff2bd2f9cf0de2e379bc}
+
+\begin{CompactList}\small\item\em user activated \hyperlink{classTraceroute}{Traceroute} Single host from menus \item\end{CompactList}\item 
+\hypertarget{classMainWindow_05fb552f0feecb0a5c66264d5c55688b}{
+void \hyperlink{classMainWindow_05fb552f0feecb0a5c66264d5c55688b}{on\_\-action\_\-TracerouteBatch\_\-triggered} ()}
+\label{classMainWindow_05fb552f0feecb0a5c66264d5c55688b}
+
+\begin{CompactList}\small\item\em user activated \hyperlink{classTraceroute}{Traceroute} Batch from menus \item\end{CompactList}\item 
+\hypertarget{classMainWindow_9534f9eab823edea8333357bf19fed9d}{
+void \hyperlink{classMainWindow_9534f9eab823edea8333357bf19fed9d}{on\_\-action\_\-Settings\_\-triggered} ()}
+\label{classMainWindow_9534f9eab823edea8333357bf19fed9d}
+
+\begin{CompactList}\small\item\em user activated Settings from menus \item\end{CompactList}\item 
+\hypertarget{classMainWindow_bb86856c929cefa5e11fce585e6f6588}{
+void \hyperlink{classMainWindow_bb86856c929cefa5e11fce585e6f6588}{updateStatusBar} (QString \&text)}
+\label{classMainWindow_bb86856c929cefa5e11fce585e6f6588}
+
+\begin{CompactList}\small\item\em slot receiving message to update the status bar contents \item\end{CompactList}\item 
+\hypertarget{classMainWindow_f151b97a4e18887e851965a80bb21699}{
+void \hyperlink{classMainWindow_f151b97a4e18887e851965a80bb21699}{tracerouteHost} (const QString \&host)}
+\label{classMainWindow_f151b97a4e18887e851965a80bb21699}
+
+\begin{CompactList}\small\item\em slot receiving message from \hyperlink{classSingleRunDialog_8a7ca35a48e03609bea17efb6b716642}{SingleRunDialog::on\_\-buttonBox\_\-accepted()} \item\end{CompactList}\item 
+\hypertarget{classMainWindow_6c1d1f171b55114221fe6c2ffb01ac96}{
+void \hyperlink{classMainWindow_6c1d1f171b55114221fe6c2ffb01ac96}{tracerouteBatch} (const QString \&batch)}
+\label{classMainWindow_6c1d1f171b55114221fe6c2ffb01ac96}
+
+\begin{CompactList}\small\item\em slot receiving message from \hyperlink{classBatchRunDialog_b52ece91fa455b57e6d04130bac90c71}{BatchRunDialog::on\_\-buttonBox\_\-accepted()} \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classMainWindow_7be6a5d98970ac1a6296c6f9aee1e9bb}{
+void \hyperlink{classMainWindow_7be6a5d98970ac1a6296c6f9aee1e9bb}{about} ()}
+\label{classMainWindow_7be6a5d98970ac1a6296c6f9aee1e9bb}
+
+\begin{CompactList}\small\item\em pop up the About message box \item\end{CompactList}\item 
+\hypertarget{classMainWindow_25fa25750998e6db2552a01426479d1f}{
+void \hyperlink{classMainWindow_25fa25750998e6db2552a01426479d1f}{createStatusBarFields} ()}
+\label{classMainWindow_25fa25750998e6db2552a01426479d1f}
+
+\begin{CompactList}\small\item\em setup the status bar \item\end{CompactList}\item 
+\hypertarget{classMainWindow_945e92ccab854191c4b88df03fc40398}{
+void \hyperlink{classMainWindow_945e92ccab854191c4b88df03fc40398}{destroyStatusBarFields} ()}
+\label{classMainWindow_945e92ccab854191c4b88df03fc40398}
+
+\begin{CompactList}\small\item\em teardown status bar \item\end{CompactList}\item 
+\hypertarget{classMainWindow_06476208b8466211f3bb0fcae787052b}{
+void \hyperlink{classMainWindow_06476208b8466211f3bb0fcae787052b}{readSettings} ()}
+\label{classMainWindow_06476208b8466211f3bb0fcae787052b}
+
+\begin{CompactList}\small\item\em retrieve main window position and size from last run \item\end{CompactList}\item 
+\hypertarget{classMainWindow_49be45fc9b993fdc3afe55d4b6fa0650}{
+void \hyperlink{classMainWindow_49be45fc9b993fdc3afe55d4b6fa0650}{writeSettings} ()}
+\label{classMainWindow_49be45fc9b993fdc3afe55d4b6fa0650}
+
+\begin{CompactList}\small\item\em persist main window position and size \item\end{CompactList}\item 
+\hypertarget{classMainWindow_67fa2c7eca83bb0cfe6973694b677a43}{
+\hyperlink{classMainWindow_67fa2c7eca83bb0cfe6973694b677a43}{MainWindow} (const \hyperlink{classMainWindow}{MainWindow} \&mw)}
+\label{classMainWindow_67fa2c7eca83bb0cfe6973694b677a43}
+
+\begin{CompactList}\small\item\em prevent use of copy constructor \item\end{CompactList}\item 
+\hypertarget{classMainWindow_a47888dc04bf0b8fe9287ecc2b01d0fe}{
+\hyperlink{classMainWindow}{MainWindow} \& \hyperlink{classMainWindow_a47888dc04bf0b8fe9287ecc2b01d0fe}{operator=} (const \hyperlink{classMainWindow}{MainWindow} \&mw)}
+\label{classMainWindow_a47888dc04bf0b8fe9287ecc2b01d0fe}
+
+\begin{CompactList}\small\item\em prevent use of assignment operator \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classMainWindow_617d869eea9fc6bcd9e6802319f7b773}{
+\hyperlink{classPStatus}{PStatus} \hyperlink{classMainWindow_617d869eea9fc6bcd9e6802319f7b773}{pstat}}
+\label{classMainWindow_617d869eea9fc6bcd9e6802319f7b773}
+
+\begin{CompactList}\small\item\em encapsulate various bits of status \item\end{CompactList}\item 
+\hypertarget{classMainWindow_08d29ad1b52f7d36b85bcb11c1f5b5cd}{
+\hyperlink{classTrDo}{TrDo} \hyperlink{classMainWindow_08d29ad1b52f7d36b85bcb11c1f5b5cd}{doer}}
+\label{classMainWindow_08d29ad1b52f7d36b85bcb11c1f5b5cd}
+
+\begin{CompactList}\small\item\em actually runs the traceroutes \item\end{CompactList}\item 
+\hypertarget{classMainWindow_0992eb7fffdfd24227fac1678b56fe4d}{
+QLabel $\ast$ \hyperlink{classMainWindow_0992eb7fffdfd24227fac1678b56fe4d}{sbar\_\-left}}
+\label{classMainWindow_0992eb7fffdfd24227fac1678b56fe4d}
+
+\begin{CompactList}\small\item\em left field of the StatusBar \item\end{CompactList}\item 
+\hypertarget{classMainWindow_fb0f9e4af85f4b11db2e51b808823fbc}{
+QProgressDialog $\ast$ \hyperlink{classMainWindow_fb0f9e4af85f4b11db2e51b808823fbc}{pdlg}}
+\label{classMainWindow_fb0f9e4af85f4b11db2e51b808823fbc}
+
+\begin{CompactList}\small\item\em process dialog widget \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Widget for main-window (not wizard) style TrGen. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+MainWindow.h\item 
+MainWindow.cpp\end{CompactItemize}

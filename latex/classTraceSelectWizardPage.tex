@@ -1,0 +1,117 @@
+\hypertarget{classTraceSelectWizardPage}{
+\section{TraceSelectWizardPage Class Reference}
+\label{classTraceSelectWizardPage}\index{TraceSelectWizardPage@{TraceSelectWizardPage}}
+}
+{\tt \#include $<$ixmaps-wizard.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classTraceSelectWizardPage_52bc076b279131bd43e9e80dc94eaf41}{TraceSelectWizardPage} (QWidget $\ast$parent=0)
+\item 
+\hypertarget{classTraceSelectWizardPage_dd7ed2d1fe53f65c94de0cab1ba506ef}{
+void \hyperlink{classTraceSelectWizardPage_dd7ed2d1fe53f65c94de0cab1ba506ef}{initializePage} ()}
+\label{classTraceSelectWizardPage_dd7ed2d1fe53f65c94de0cab1ba506ef}
+
+\begin{CompactList}\small\item\em called just before display, so the ComboBox can get filled \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const QString \hyperlink{classTraceSelectWizardPage_ecea06bd0ef463ee341d1dab45b94ecf}{SAFE\_\-DNS\_\-CHARS}
+\begin{CompactList}\small\item\em only allow these characters in a hostname \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTraceSelectWizardPage_17bf4a71d95dfd398c1541074aaa563b}{
+bool \hyperlink{classTraceSelectWizardPage_17bf4a71d95dfd398c1541074aaa563b}{eventFilter} (QObject $\ast$, QEvent $\ast$)}
+\label{classTraceSelectWizardPage_17bf4a71d95dfd398c1541074aaa563b}
+
+\begin{CompactList}\small\item\em only permit certain keystrokes \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTraceSelectWizardPage_09f41e03b88d1b0eb7f04263587ebc3f}{
+QTextEdit $\ast$ \hyperlink{classTraceSelectWizardPage_09f41e03b88d1b0eb7f04263587ebc3f}{edit}}
+\label{classTraceSelectWizardPage_09f41e03b88d1b0eb7f04263587ebc3f}
+
+\begin{CompactList}\small\item\em read-only text panel \item\end{CompactList}\item 
+\hypertarget{classTraceSelectWizardPage_efc4ae411f6a3a83d13dc6b591c55ff1}{
+QLabel $\ast$ \hyperlink{classTraceSelectWizardPage_efc4ae411f6a3a83d13dc6b591c55ff1}{label\_\-batch}}
+\label{classTraceSelectWizardPage_efc4ae411f6a3a83d13dc6b591c55ff1}
+
+\begin{CompactList}\small\item\em prompt for traceroute batch selection \item\end{CompactList}\item 
+\hypertarget{classTraceSelectWizardPage_0e6b39a93b12ab04cec58493988f991c}{
+QLabel $\ast$ \hyperlink{classTraceSelectWizardPage_0e6b39a93b12ab04cec58493988f991c}{label\_\-single}}
+\label{classTraceSelectWizardPage_0e6b39a93b12ab04cec58493988f991c}
+
+\begin{CompactList}\small\item\em prompt for traceroute single destination host entry \item\end{CompactList}\item 
+\hypertarget{classTraceSelectWizardPage_4a545e13ffac35321c06b4c80dfd3cd3}{
+QComboBox $\ast$ \hyperlink{classTraceSelectWizardPage_4a545e13ffac35321c06b4c80dfd3cd3}{cb\_\-batch}}
+\label{classTraceSelectWizardPage_4a545e13ffac35321c06b4c80dfd3cd3}
+
+\begin{CompactList}\small\item\em user picks one of the available batch lists \item\end{CompactList}\item 
+\hypertarget{classTraceSelectWizardPage_f8655eb96839f5c311b3a69ce8800b9e}{
+int \hyperlink{classTraceSelectWizardPage_f8655eb96839f5c311b3a69ce8800b9e}{cb\_\-lastValidIndex}}
+\label{classTraceSelectWizardPage_f8655eb96839f5c311b3a69ce8800b9e}
+
+\begin{CompactList}\small\item\em make last selection sticky \item\end{CompactList}\item 
+\hypertarget{classTraceSelectWizardPage_d9b6cc99cdf592981f43d2bb6c78bbee}{
+QLineEdit $\ast$ \hyperlink{classTraceSelectWizardPage_d9b6cc99cdf592981f43d2bb6c78bbee}{le\_\-single}}
+\label{classTraceSelectWizardPage_d9b6cc99cdf592981f43d2bb6c78bbee}
+
+\begin{CompactList}\small\item\em user types a hostname here \item\end{CompactList}\item 
+\hypertarget{classTraceSelectWizardPage_61b468a750afce70fe4cb888eeb2f12a}{
+QVBoxLayout $\ast$ \hyperlink{classTraceSelectWizardPage_61b468a750afce70fe4cb888eeb2f12a}{layout}}
+\label{classTraceSelectWizardPage_61b468a750afce70fe4cb888eeb2f12a}
+
+\begin{CompactList}\small\item\em layout to hold the other widgets \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTraceSelectWizardPage_d62a26a0af746c34a19cd066f6dabd22}{
+class \hyperlink{classTraceSelectWizardPage_d62a26a0af746c34a19cd066f6dabd22}{IXmapsWizard}}
+\label{classTraceSelectWizardPage_d62a26a0af746c34a19cd066f6dabd22}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+State for the \hyperlink{classTraceroute}{Traceroute} Selection Wizard page. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTraceSelectWizardPage_52bc076b279131bd43e9e80dc94eaf41}{
+\index{TraceSelectWizardPage@{TraceSelectWizardPage}!TraceSelectWizardPage@{TraceSelectWizardPage}}
+\index{TraceSelectWizardPage@{TraceSelectWizardPage}!TraceSelectWizardPage@{TraceSelectWizardPage}}
+\subsubsection[TraceSelectWizardPage]{\setlength{\rightskip}{0pt plus 5cm}TraceSelectWizardPage::TraceSelectWizardPage (QWidget $\ast$ {\em parent} = {\tt 0})}}
+\label{classTraceSelectWizardPage_52bc076b279131bd43e9e80dc94eaf41}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em parent}]is the parent widget \end{description}
+\end{Desc}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classTraceSelectWizardPage_ecea06bd0ef463ee341d1dab45b94ecf}{
+\index{TraceSelectWizardPage@{TraceSelectWizardPage}!SAFE\_\-DNS\_\-CHARS@{SAFE\_\-DNS\_\-CHARS}}
+\index{SAFE\_\-DNS\_\-CHARS@{SAFE\_\-DNS\_\-CHARS}!TraceSelectWizardPage@{TraceSelectWizardPage}}
+\subsubsection[SAFE\_\-DNS\_\-CHARS]{\setlength{\rightskip}{0pt plus 5cm}const QString {\bf TraceSelectWizardPage::SAFE\_\-DNS\_\-CHARS}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{classTraceSelectWizardPage_ecea06bd0ef463ee341d1dab45b94ecf}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} "\010" "\011" "\015"
+      "-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+\end{verbatim}
+\end{Code}
+only allow these characters in a hostname 
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+ixmaps-wizard.h\item 
+ixmaps-wizard.cpp\end{CompactItemize}

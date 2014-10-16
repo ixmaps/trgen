@@ -1,0 +1,309 @@
+\hypertarget{classTrDo}{
+\section{TrDo Class Reference}
+\label{classTrDo}\index{TrDo@{TrDo}}
+}
+{\tt \#include $<$TrDo.h$>$}
+
+\subsection*{Signals}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrDo_71b0a7cd37eae74dcc72a844e3d26485}{
+void \hyperlink{classTrDo_71b0a7cd37eae74dcc72a844e3d26485}{criticalError} ()}
+\label{classTrDo_71b0a7cd37eae74dcc72a844e3d26485}
+
+\begin{CompactList}\small\item\em emitted upon critical error \item\end{CompactList}\item 
+\hypertarget{classTrDo_22fbf5ee2a4bf2df9b6bf1d3ddfa8f67}{
+void \hyperlink{classTrDo_22fbf5ee2a4bf2df9b6bf1d3ddfa8f67}{tracerouteFinished} ()}
+\label{classTrDo_22fbf5ee2a4bf2df9b6bf1d3ddfa8f67}
+
+\begin{CompactList}\small\item\em traceroute request is done \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classTrDo_c8608da0169aba638259ee2b5d8e93c2}{TrDo} (\hyperlink{classPStatus}{PStatus} $\ast$\hyperlink{classTrDo_55091c42eba7b183155e67793afb06e0}{pstat}, QWidget $\ast$\hyperlink{classTrDo_307c1b2dd82efb32f42ec5160676493e}{owner})
+\item 
+void \hyperlink{classTrDo_13b09aaa50b54aa250c327007232ef35}{tracerouteHost} (const QString \&host)
+\item 
+void \hyperlink{classTrDo_60f80f4c9d937ab0572d18f1a4e7d4f3}{tracerouteBatch} (const QString \&batch, QProgressDialog $\ast$pdlg)
+\item 
+bool \hyperlink{classTrDo_fe15575c4b2b447b064c833c25370dca}{trsetsReady} ()
+\begin{CompactList}\small\item\em traceroute batch sets are available for use \item\end{CompactList}\item 
+\hypertarget{classTrDo_396572dea95dde098b3d65cb98e9610c}{
+void \hyperlink{classTrDo_396572dea95dde098b3d65cb98e9610c}{debugShowHistory} ()}
+\label{classTrDo_396572dea95dde098b3d65cb98e9610c}
+
+\begin{CompactList}\small\item\em dump history to debug \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrDo_92f843277e1338717f5a4f3aff0e56aa}{
+QStringList \hyperlink{classTrDo_92f843277e1338717f5a4f3aff0e56aa}{trsets}}
+\label{classTrDo_92f843277e1338717f5a4f3aff0e56aa}
+
+\begin{CompactList}\small\item\em traceroute batch sets - unmangled names \item\end{CompactList}\item 
+\hypertarget{classTrDo_04ecbe0ec200411f90e066d3989c5e9b}{
+QList$<$ \hyperlink{classTrStatus}{TrStatus} $\ast$ $>$ \hyperlink{classTrDo_04ecbe0ec200411f90e066d3989c5e9b}{history}}
+\label{classTrDo_04ecbe0ec200411f90e066d3989c5e9b}
+
+\begin{CompactList}\small\item\em status for each traceroute done since program startup \item\end{CompactList}\item 
+\hypertarget{classTrDo_b1912812526c5f6f6bd3105e80e1954c}{
+\hyperlink{classTrStatus}{TrStatus} $\ast$ \hyperlink{classTrDo_b1912812526c5f6f6bd3105e80e1954c}{tstat}}
+\label{classTrDo_b1912812526c5f6f6bd3105e80e1954c}
+
+\begin{CompactList}\small\item\em current traceroute \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrDo_4cf4ffad541f977b5d91e7e03cddb52b}{
+static QString \hyperlink{classTrDo_4cf4ffad541f977b5d91e7e03cddb52b}{programVersion}}
+\label{classTrDo_4cf4ffad541f977b5d91e7e03cddb52b}
+
+\begin{CompactList}\small\item\em last digit odd=slow (trparse) version, even=fast (admin mode) version \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Slots}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrDo_b5ea9400b92cf70bf0fba87f66a6f86d}{
+void \hyperlink{classTrDo_b5ea9400b92cf70bf0fba87f66a6f86d}{childStarted} ()}
+\label{classTrDo_b5ea9400b92cf70bf0fba87f66a6f86d}
+
+\begin{CompactList}\small\item\em slot called when the child process (low-level traceroute doer program) is started \item\end{CompactList}\item 
+void \hyperlink{classTrDo_4a43dbd440bd3dcbf747be138086b293}{childFinished} (int exitCode, QProcess::ExitStatus exitStatus)
+\item 
+void \hyperlink{classTrDo_f2fb422e879258efaca94280f849b3dc}{childError} (QProcess::ProcessError error)
+\item 
+\hypertarget{classTrDo_dc3766e45ba34158d1da99c96bc7d055}{
+void \hyperlink{classTrDo_dc3766e45ba34158d1da99c96bc7d055}{cancel} ()}
+\label{classTrDo_dc3766e45ba34158d1da99c96bc7d055}
+
+\begin{CompactList}\small\item\em slot called to cancel current operation \item\end{CompactList}\item 
+void \hyperlink{classTrDo_f4e4e8f6848183014a157605bc9c402a}{cancel} (int result)
+\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrDo_b24c01ebac00edcc1052ea56be63f525}{
+\hyperlink{classTrDo_b24c01ebac00edcc1052ea56be63f525}{TrDo} (const \hyperlink{classTrDo}{TrDo} \&)}
+\label{classTrDo_b24c01ebac00edcc1052ea56be63f525}
+
+\begin{CompactList}\small\item\em disable use of copy constructor \item\end{CompactList}\item 
+void \hyperlink{classTrDo_3bbf80bc98ceb20339ff0497c99ba199}{trsUnmangle} (QString \&unmangled, QString \&mangled)
+\item 
+bool \hyperlink{classTrDo_049d408bb8a464a9e8f69c2b1f909c14}{newTrStatus} (const QString \&h\_\-name, bool in\_\-batch, int \hyperlink{classTrDo_7191eabfb34969b212cc63781de586f9}{op\_\-num})
+\item 
+void \hyperlink{classTrDo_04829a8efd9827ec069150bb3a9880ff}{runTraceroute} (const QString \&host)
+\item 
+void \hyperlink{classTrDo_2725ad3cfadba888fb540ea9189f07b3}{msgChildError} (QProcess::ProcessError err)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrDo_307c1b2dd82efb32f42ec5160676493e}{
+QWidget $\ast$ \hyperlink{classTrDo_307c1b2dd82efb32f42ec5160676493e}{owner}}
+\label{classTrDo_307c1b2dd82efb32f42ec5160676493e}
+
+\begin{CompactList}\small\item\em parent widget for the pop-up \item\end{CompactList}\item 
+\hypertarget{classTrDo_55091c42eba7b183155e67793afb06e0}{
+\hyperlink{classPStatus}{PStatus} $\ast$ \hyperlink{classTrDo_55091c42eba7b183155e67793afb06e0}{pstat}}
+\label{classTrDo_55091c42eba7b183155e67793afb06e0}
+
+\begin{CompactList}\small\item\em encapsulate various bits of status \item\end{CompactList}\item 
+\hypertarget{classTrDo_41b389c0ff9311ce7b51ebc50eab43c8}{
+bool \hyperlink{classTrDo_41b389c0ff9311ce7b51ebc50eab43c8}{cancelling}}
+\label{classTrDo_41b389c0ff9311ce7b51ebc50eab43c8}
+
+\begin{CompactList}\small\item\em cancellation in progress \item\end{CompactList}\item 
+\hypertarget{classTrDo_cdafeb531211dc81f62d1f9cc40ae604}{
+int \hyperlink{classTrDo_cdafeb531211dc81f62d1f9cc40ae604}{privacy}}
+\label{classTrDo_cdafeb531211dc81f62d1f9cc40ae604}
+
+\begin{CompactList}\small\item\em number of bits to mask off src address \item\end{CompactList}\item 
+\hypertarget{classTrDo_6e3e49c7d0ab9d28dec192698e5cb072}{
+QMap$<$ QString, QString $>$ \hyperlink{classTrDo_6e3e49c7d0ab9d28dec192698e5cb072}{trs\_\-map}}
+\label{classTrDo_6e3e49c7d0ab9d28dec192698e5cb072}
+
+\begin{CompactList}\small\item\em traceroute batch sets - lookup mangled (real) names \item\end{CompactList}\item 
+\hypertarget{classTrDo_9c11a7c66a32d3252f8533f0c5026237}{
+\hyperlink{classTrWorkItem}{TrWorkItem} $\ast$ \hyperlink{classTrDo_9c11a7c66a32d3252f8533f0c5026237}{wi}}
+\label{classTrDo_9c11a7c66a32d3252f8533f0c5026237}
+
+\begin{CompactList}\small\item\em a single traceroute request from initiation through submission \item\end{CompactList}\item 
+\hypertarget{classTrDo_7191eabfb34969b212cc63781de586f9}{
+int \hyperlink{classTrDo_7191eabfb34969b212cc63781de586f9}{op\_\-num}}
+\label{classTrDo_7191eabfb34969b212cc63781de586f9}
+
+\begin{CompactList}\small\item\em each user request in a program run gets an operation number \item\end{CompactList}\item 
+\hypertarget{classTrDo_f9570c10c1029e9df3fe044a72e13249}{
+bool \hyperlink{classTrDo_f9570c10c1029e9df3fe044a72e13249}{block\_\-traceroute}}
+\label{classTrDo_f9570c10c1029e9df3fe044a72e13249}
+
+\begin{CompactList}\small\item\em whether GUI should block during a traceroute \item\end{CompactList}\item 
+\hypertarget{classTrDo_0b464e12aed35a144ed6f70b9dac02d1}{
+QString \hyperlink{classTrDo_0b464e12aed35a144ed6f70b9dac02d1}{tr\_\-program}}
+\label{classTrDo_0b464e12aed35a144ed6f70b9dac02d1}
+
+\begin{CompactList}\small\item\em name (with path if required) of traceroute program \item\end{CompactList}\item 
+\hypertarget{classTrDo_a43925bacf574ca618a5797e46eba746}{
+int \hyperlink{classTrDo_a43925bacf574ca618a5797e46eba746}{nprobes}}
+\label{classTrDo_a43925bacf574ca618a5797e46eba746}
+
+\begin{CompactList}\small\item\em number of probes per hop \item\end{CompactList}\item 
+\hypertarget{classTrDo_dbb1f50609d91d64f24a19b1b1c3d92f}{
+QProcess \hyperlink{classTrDo_dbb1f50609d91d64f24a19b1b1c3d92f}{process}}
+\label{classTrDo_dbb1f50609d91d64f24a19b1b1c3d92f}
+
+\begin{CompactList}\small\item\em Qt process object representing the O/S interface to the child. \item\end{CompactList}\item 
+\hypertarget{classTrDo_712101cfaa278bcfb7c3ca545bd67ff5}{
+\hyperlink{classServerComm}{ServerComm} \hyperlink{classTrDo_712101cfaa278bcfb7c3ca545bd67ff5}{sc}}
+\label{classTrDo_712101cfaa278bcfb7c3ca545bd67ff5}
+
+\begin{CompactList}\small\item\em object that handles communications with the server \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classTraceroute}{Traceroute} Doer. Handles the workflow for single or batch traceroute requests from the GUI. Typically, the application instantiates one of these for the duration of the program. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTrDo_c8608da0169aba638259ee2b5d8e93c2}{
+\index{TrDo@{TrDo}!TrDo@{TrDo}}
+\index{TrDo@{TrDo}!TrDo@{TrDo}}
+\subsubsection[TrDo]{\setlength{\rightskip}{0pt plus 5cm}TrDo::TrDo ({\bf PStatus} $\ast$ {\em pstat}, \/  QWidget $\ast$ {\em owner})}}
+\label{classTrDo_c8608da0169aba638259ee2b5d8e93c2}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pstat}]points to a program status \item[{\em owner}]points to the high-level owning widget\end{description}
+\end{Desc}
+Initialize the GUI-independent layer. Select between available low-level traceroute doer programs, determine the number of traceroute probes per hop, and the default privacy settings. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTrDo_13b09aaa50b54aa250c327007232ef35}{
+\index{TrDo@{TrDo}!tracerouteHost@{tracerouteHost}}
+\index{tracerouteHost@{tracerouteHost}!TrDo@{TrDo}}
+\subsubsection[tracerouteHost]{\setlength{\rightskip}{0pt plus 5cm}void TrDo::tracerouteHost (const QString \& {\em host})}}
+\label{classTrDo_13b09aaa50b54aa250c327007232ef35}
+
+
+do a traceroute to a single host \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em host}]is a hostname or IPv4 dotted-quad address\end{description}
+\end{Desc}
+Run a single traceroute. A new traceroute status object is created, and a call to \hyperlink{classTrDo_04829a8efd9827ec069150bb3a9880ff}{runTraceroute()} is wrapped. The GUI status bar is updated. Upon completion, the \hyperlink{classTrDo_22fbf5ee2a4bf2df9b6bf1d3ddfa8f67}{tracerouteFinished()} signal is emitted. \hypertarget{classTrDo_60f80f4c9d937ab0572d18f1a4e7d4f3}{
+\index{TrDo@{TrDo}!tracerouteBatch@{tracerouteBatch}}
+\index{tracerouteBatch@{tracerouteBatch}!TrDo@{TrDo}}
+\subsubsection[tracerouteBatch]{\setlength{\rightskip}{0pt plus 5cm}void TrDo::tracerouteBatch (const QString \& {\em batch}, \/  QProgressDialog $\ast$ {\em pdlg})}}
+\label{classTrDo_60f80f4c9d937ab0572d18f1a4e7d4f3}
+
+
+do a batch of traceroutes \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em batch}]is the name of the batch as presented via GUI \item[{\em pdlg}]points to a progress dialog widget\end{description}
+\end{Desc}
+Run a traceroute batch. The batch filename is mapped to the true filename on the server, then the batch file is fetched and parsed.
+
+Lines starting with \char`\"{}host \char`\"{} denote hostnames to run traceroutes to. All other lines are treated as comments. \begin{Desc}
+\item[See also:]\hyperlink{classTrDo_13b09aaa50b54aa250c327007232ef35}{tracerouteHost()} \end{Desc}
+\hypertarget{classTrDo_fe15575c4b2b447b064c833c25370dca}{
+\index{TrDo@{TrDo}!trsetsReady@{trsetsReady}}
+\index{trsetsReady@{trsetsReady}!TrDo@{TrDo}}
+\subsubsection[trsetsReady]{\setlength{\rightskip}{0pt plus 5cm}bool TrDo::trsetsReady ()}}
+\label{classTrDo_fe15575c4b2b447b064c833c25370dca}
+
+
+traceroute batch sets are available for use 
+
+Get traceroute batch file names from the server if they already have not been fetched. The filenames are \char`\"{}unmangled\char`\"{} to be easy for the user to view via the GUI. \begin{Desc}
+\item[See also:]\hyperlink{classTrDo_3bbf80bc98ceb20339ff0497c99ba199}{trsUnmangle()} \end{Desc}
+\hypertarget{classTrDo_3bbf80bc98ceb20339ff0497c99ba199}{
+\index{TrDo@{TrDo}!trsUnmangle@{trsUnmangle}}
+\index{trsUnmangle@{trsUnmangle}!TrDo@{TrDo}}
+\subsubsection[trsUnmangle]{\setlength{\rightskip}{0pt plus 5cm}void TrDo::trsUnmangle (QString \& {\em unmangled}, \/  QString \& {\em mangled})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classTrDo_3bbf80bc98ceb20339ff0497c99ba199}
+
+
+unmangle a traceroute-set filename from the server \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em unmangled}]is the unmangled version to be shown via GUI \item[{\em mangled}]is the filename on the server \end{description}
+\end{Desc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000003}{Todo}]\{ make mangled const \} \end{Desc}
+Unmangle a .trset filename from the server. As the web server directory listing is in sorted order, the filenames are preceeded by decimal digits and then a colon character. This scheme allows the ordering as presented to the user to be determined by the actual filename used in deployment. The user is then shown a list of virtual filenames in priority order. \hypertarget{classTrDo_049d408bb8a464a9e8f69c2b1f909c14}{
+\index{TrDo@{TrDo}!newTrStatus@{newTrStatus}}
+\index{newTrStatus@{newTrStatus}!TrDo@{TrDo}}
+\subsubsection[newTrStatus]{\setlength{\rightskip}{0pt plus 5cm}bool TrDo::newTrStatus (const QString \& {\em h\_\-name}, \/  bool {\em in\_\-batch}, \/  int {\em op\_\-num})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classTrDo_049d408bb8a464a9e8f69c2b1f909c14}
+
+
+create a new traceroute status object and add it to the history \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em h\_\-name}]is the hostname \item[{\em in\_\-batch}]is true iff the traceroute is part of a batch \item[{\em op\_\-num}]is sequential operation number for the process\end{description}
+\end{Desc}
+Create a new traceroute status object, adding it to the history. \hypertarget{classTrDo_4a43dbd440bd3dcbf747be138086b293}{
+\index{TrDo@{TrDo}!childFinished@{childFinished}}
+\index{childFinished@{childFinished}!TrDo@{TrDo}}
+\subsubsection[childFinished]{\setlength{\rightskip}{0pt plus 5cm}void TrDo::childFinished (int {\em exitCode}, \/  QProcess::ExitStatus {\em exitStatus})\hspace{0.3cm}{\tt  \mbox{[}private, slot\mbox{]}}}}
+\label{classTrDo_4a43dbd440bd3dcbf747be138086b293}
+
+
+slot called when the child process finishes \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em exitCode}]is the child process exit code \item[{\em exitStatus}]is a Qt QProcess::ExitStatus enum\end{description}
+\end{Desc}
+Slot called when the child process is done. If the child exited without any error, the standard output from the child is parsed, the privacy setting applied to the traceroute which is then formatted for submission to the server as an HTTP POST, then then submitted. If there was an error code from the child, it is mapped into the \hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da5302}{TrStatus::errCode} enum range. \hypertarget{classTrDo_f2fb422e879258efaca94280f849b3dc}{
+\index{TrDo@{TrDo}!childError@{childError}}
+\index{childError@{childError}!TrDo@{TrDo}}
+\subsubsection[childError]{\setlength{\rightskip}{0pt plus 5cm}void TrDo::childError (QProcess::ProcessError {\em error})\hspace{0.3cm}{\tt  \mbox{[}private, slot\mbox{]}}}}
+\label{classTrDo_f2fb422e879258efaca94280f849b3dc}
+
+
+slot called if the child process could not be created \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em error}]is the reason from Qt \end{description}
+\end{Desc}
+\hypertarget{classTrDo_f4e4e8f6848183014a157605bc9c402a}{
+\index{TrDo@{TrDo}!cancel@{cancel}}
+\index{cancel@{cancel}!TrDo@{TrDo}}
+\subsubsection[cancel]{\setlength{\rightskip}{0pt plus 5cm}void TrDo::cancel (int {\em result})\hspace{0.3cm}{\tt  \mbox{[}private, slot\mbox{]}}}}
+\label{classTrDo_f4e4e8f6848183014a157605bc9c402a}
+
+
+slot called to cancel current operation \begin{Desc}
+\item[\hyperlink{todo__todo000004}{Todo}]\{ is this method superfluous? \} \end{Desc}
+\hypertarget{classTrDo_04829a8efd9827ec069150bb3a9880ff}{
+\index{TrDo@{TrDo}!runTraceroute@{runTraceroute}}
+\index{runTraceroute@{runTraceroute}!TrDo@{TrDo}}
+\subsubsection[runTraceroute]{\setlength{\rightskip}{0pt plus 5cm}void TrDo::runTraceroute (const QString \& {\em host})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classTrDo_04829a8efd9827ec069150bb3a9880ff}
+
+
+run a traceroute \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em host}]is the hostname or a dotted-quad\end{description}
+\end{Desc}
+Run a traceroute. Only one traceroute can be run at a time. A temporary \hyperlink{classTrWorkItem}{TrWorkItem} work item is created for the prospective traceroute. If the hostname is resolvable to an IP address, the low-level traceroute doer program is started in a separate process. The process completion is waited for in a loop that wakes up every 100 milliseconds to allow the GUI to remain responsive. \hypertarget{classTrDo_2725ad3cfadba888fb540ea9189f07b3}{
+\index{TrDo@{TrDo}!msgChildError@{msgChildError}}
+\index{msgChildError@{msgChildError}!TrDo@{TrDo}}
+\subsubsection[msgChildError]{\setlength{\rightskip}{0pt plus 5cm}void TrDo::msgChildError (QProcess::ProcessError {\em err})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classTrDo_2725ad3cfadba888fb540ea9189f07b3}
+
+
+Handle child process failures. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em err}]is a Qt QProcess::ProcessError enum\end{description}
+\end{Desc}
+Handle child process failures. These do not include the child exiting with a non-zero exit code. The Qt QProcess::ProcessError enum values are mapped into the \hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da5302}{TrStatus::errCode} enum range. If the error is not because the user issued a cancel request via the GUI, pop-up a critical MessageBox and emit a \hyperlink{classTrDo_71b0a7cd37eae74dcc72a844e3d26485}{criticalError()} signal. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+TrDo.h\item 
+moc\_\-TrDo.cpp\item 
+TrDo.cpp\end{CompactItemize}

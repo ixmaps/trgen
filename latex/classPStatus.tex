@@ -1,0 +1,108 @@
+\hypertarget{classPStatus}{
+\section{PStatus Class Reference}
+\label{classPStatus}\index{PStatus@{PStatus}}
+}
+{\tt \#include $<$PStatus.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{classPStatus_12bddf7bbeab6dfb53ae018c4f2939fd}{mw\_\-op} \{ \par
+\textbf{none}, 
+\textbf{batch\_\-fetch}, 
+\textbf{host\_\-tr}, 
+\textbf{batch\_\-tr}, 
+\par
+\textbf{host\_\-done}, 
+\textbf{batch\_\-done}
+ \}
+\begin{CompactList}\small\item\em high-level operation \item\end{CompactList}\end{CompactItemize}
+\subsection*{Signals}
+\begin{CompactItemize}
+\item 
+\hypertarget{classPStatus_33221861aff7b12003b0ee313dfe1fe5}{
+void \hyperlink{classPStatus_33221861aff7b12003b0ee313dfe1fe5}{updateDisplayText} (QString \&\hyperlink{classPStatus_56d3f6caa85a1a050cd41a099df6d931}{text})}
+\label{classPStatus_33221861aff7b12003b0ee313dfe1fe5}
+
+\begin{CompactList}\small\item\em send status updates to whoever is interested \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classPStatus_fd35bafbb383a846915c2f366a6cd08b}{
+\hyperlink{classPStatus_fd35bafbb383a846915c2f366a6cd08b}{PStatus} ()}
+\label{classPStatus_fd35bafbb383a846915c2f366a6cd08b}
+
+\begin{CompactList}\small\item\em constructor \item\end{CompactList}\item 
+void \hyperlink{classPStatus_633fc560875724006dbe656a7e4665e5}{update} (\hyperlink{classPStatus_12bddf7bbeab6dfb53ae018c4f2939fd}{mw\_\-op} \hyperlink{classPStatus_140a3641f74f0eaf753ad357695407d6}{op})
+\item 
+\hypertarget{classPStatus_2cbc1ea1c01a19ca70e53777ffafa50c}{
+void \hyperlink{classPStatus_2cbc1ea1c01a19ca70e53777ffafa50c}{update} ()}
+\label{classPStatus_2cbc1ea1c01a19ca70e53777ffafa50c}
+
+\begin{CompactList}\small\item\em format the status display message according to the current high-level operation \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classPStatus_140a3641f74f0eaf753ad357695407d6}{
+\hyperlink{classPStatus_12bddf7bbeab6dfb53ae018c4f2939fd}{mw\_\-op} \hyperlink{classPStatus_140a3641f74f0eaf753ad357695407d6}{op}}
+\label{classPStatus_140a3641f74f0eaf753ad357695407d6}
+
+\begin{CompactList}\small\item\em high-level operation in progress \item\end{CompactList}\item 
+\hypertarget{classPStatus_e4ae091e268903577ba875d459acc128}{
+QString \hyperlink{classPStatus_e4ae091e268903577ba875d459acc128}{trHost}}
+\label{classPStatus_e4ae091e268903577ba875d459acc128}
+
+\begin{CompactList}\small\item\em host being trace-routed to as supplied by user/batch file \item\end{CompactList}\item 
+\hypertarget{classPStatus_3fa2f3e097f6a392177841b5243bb516}{
+QString \hyperlink{classPStatus_3fa2f3e097f6a392177841b5243bb516}{trBatch}}
+\label{classPStatus_3fa2f3e097f6a392177841b5243bb516}
+
+\begin{CompactList}\small\item\em name of batch file being processed \item\end{CompactList}\item 
+\hypertarget{classPStatus_affe0d729cafa713eda34de1c3e7d584}{
+int \hyperlink{classPStatus_affe0d729cafa713eda34de1c3e7d584}{batch\_\-host\_\-total}}
+\label{classPStatus_affe0d729cafa713eda34de1c3e7d584}
+
+\begin{CompactList}\small\item\em total hosts for current batch \item\end{CompactList}\item 
+\hypertarget{classPStatus_012924368b8372d113d211d66ac448a6}{
+int \hyperlink{classPStatus_012924368b8372d113d211d66ac448a6}{batch\_\-host\_\-count}}
+\label{classPStatus_012924368b8372d113d211d66ac448a6}
+
+\begin{CompactList}\small\item\em hosts done for current batch \item\end{CompactList}\item 
+\hypertarget{classPStatus_3799b5b2e9b5a3979d74f12db68c168b}{
+bool \hyperlink{classPStatus_3799b5b2e9b5a3979d74f12db68c168b}{is\_\-dying}}
+\label{classPStatus_3799b5b2e9b5a3979d74f12db68c168b}
+
+\begin{CompactList}\small\item\em whether to abort any processing \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classPStatus_56d3f6caa85a1a050cd41a099df6d931}{
+QString \hyperlink{classPStatus_56d3f6caa85a1a050cd41a099df6d931}{text}}
+\label{classPStatus_56d3f6caa85a1a050cd41a099df6d931}
+
+\begin{CompactList}\small\item\em status message text formatted here \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Program status. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPStatus_633fc560875724006dbe656a7e4665e5}{
+\index{PStatus@{PStatus}!update@{update}}
+\index{update@{update}!PStatus@{PStatus}}
+\subsubsection[update]{\setlength{\rightskip}{0pt plus 5cm}void PStatus::update ({\bf mw\_\-op} {\em op})}}
+\label{classPStatus_633fc560875724006dbe656a7e4665e5}
+
+
+format the status display message according to the given high-level operation \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em op}]is the operation to assume \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+PStatus.h\item 
+moc\_\-PStatus.cpp\item 
+PStatus.cpp\end{CompactItemize}

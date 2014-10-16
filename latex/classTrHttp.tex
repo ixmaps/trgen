@@ -1,0 +1,70 @@
+\hypertarget{classTrHttp}{
+\section{TrHttp Class Reference}
+\label{classTrHttp}\index{TrHttp@{TrHttp}}
+}
+{\tt \#include $<$TrHttp.h$>$}
+
+\subsection*{Public Slots}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classTrHttp_a1a518e5b0ba5501345888512a74199c}{finished} (int id, bool error)
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classTrHttp_9ec9dba1353faa4c18ed4da5a15b2e6b}{TrHttp} (const QString \&host, const QByteArray \&inputStr, \hyperlink{classTrStatus}{TrStatus} $\ast$\hyperlink{classTrHttp_235af2bb91baf44b474fab17efdb4b06}{tstat})
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrHttp_235af2bb91baf44b474fab17efdb4b06}{
+\hyperlink{classTrStatus}{TrStatus} $\ast$ \hyperlink{classTrHttp_235af2bb91baf44b474fab17efdb4b06}{tstat}}
+\label{classTrHttp_235af2bb91baf44b474fab17efdb4b06}
+
+\begin{CompactList}\small\item\em private copy stored by constructor \item\end{CompactList}\item 
+\hypertarget{classTrHttp_da41b756e7180ebe6638c8559bf63df8}{
+QTemporaryFile \hyperlink{classTrHttp_da41b756e7180ebe6638c8559bf63df8}{f}}
+\label{classTrHttp_da41b756e7180ebe6638c8559bf63df8}
+
+\begin{CompactList}\small\item\em a unique temporary file \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Subclass of QHttp used to submit traceroutes to the server. \begin{Desc}
+\item[See also:]\hyperlink{classHttpGet}{HttpGet} \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTrHttp_9ec9dba1353faa4c18ed4da5a15b2e6b}{
+\index{TrHttp@{TrHttp}!TrHttp@{TrHttp}}
+\index{TrHttp@{TrHttp}!TrHttp@{TrHttp}}
+\subsubsection[TrHttp]{\setlength{\rightskip}{0pt plus 5cm}TrHttp::TrHttp (const QString \& {\em host}, \/  const QByteArray \& {\em inputStr}, \/  {\bf TrStatus} $\ast$ {\em tstat})}}
+\label{classTrHttp_9ec9dba1353faa4c18ed4da5a15b2e6b}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em host}]is the server hostname \item[{\em inputStr}]is the traceroute formatted as HTTP POST data \item[{\em tstat}]is a pointer to a \hyperlink{classTrStatus}{TrStatus} traceroute status object\end{description}
+\end{Desc}
+Issue the traceroute submission request. The HTTP request headers are set for a POST transaction. A temporary file is opened to receive the results from the server. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTrHttp_a1a518e5b0ba5501345888512a74199c}{
+\index{TrHttp@{TrHttp}!finished@{finished}}
+\index{finished@{finished}!TrHttp@{TrHttp}}
+\subsubsection[finished]{\setlength{\rightskip}{0pt plus 5cm}void TrHttp::finished (int {\em id}, \/  bool {\em error})\hspace{0.3cm}{\tt  \mbox{[}slot\mbox{]}}}}
+\label{classTrHttp_a1a518e5b0ba5501345888512a74199c}
+
+
+slot receiving request finished message \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em id}]is a request id assigned by QHttp::request() \item[{\em error}]is set if there was an error in processing\end{description}
+\end{Desc}
+Handle completion of the traceroute submission. If there was no local error, parse the contents of the temporary file which holds the server response. If the traceroute was successfully added to the database, the traceroute\_\-id is copied into the status object tstat, otherwise the server error code is folded into the IXmaps TrGen error code space. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+TrHttp.h\item 
+TrHttp.cpp\end{CompactItemize}

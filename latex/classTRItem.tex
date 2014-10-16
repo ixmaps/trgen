@@ -1,0 +1,113 @@
+\hypertarget{classTRItem}{
+\section{TRItem Class Reference}
+\label{classTRItem}\index{TRItem@{TRItem}}
+}
+{\tt \#include $<$traceroute.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{classTRItem_0514afbd69abf71a2d996386a1658c7b}{tri\_\-status} \{ \par
+\hyperlink{classTRItem_0514afbd69abf71a2d996386a1658c7b09e662743b1bf38e0feeb00eee57e2b6}{replied} = 'r', 
+\hyperlink{classTRItem_0514afbd69abf71a2d996386a1658c7b95e8f24270cb9566de38298f4bc782fb}{timed\_\-out} = 't', 
+\hyperlink{classTRItem_0514afbd69abf71a2d996386a1658c7bf4e0efe50d8ca1905ea17ae399d7db6a}{host\_\-unreach} = 'h', 
+\hyperlink{classTRItem_0514afbd69abf71a2d996386a1658c7b6decf2f67231014ae4d8ff26fb1c56a7}{netw\_\-unreach} = 'n', 
+\par
+\hyperlink{classTRItem_0514afbd69abf71a2d996386a1658c7b9894598b07d0cbe203230938d3dcbfd7}{proto\_\-unavail} = 'p', 
+\hyperlink{classTRItem_0514afbd69abf71a2d996386a1658c7b2632d578bab2c004735ec87920374f1c}{frag\_\-needed} = 'f'
+ \}
+\begin{CompactList}\small\item\em traceroute item status \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classTRItem_6905eecc9647dcd715ab346e7234ffdc}{TRItem} (\hyperlink{classTRItem_0514afbd69abf71a2d996386a1658c7b}{tri\_\-status} \hyperlink{classTRItem_71c41b17d015ce9e9cb76582b780ff40}{status}, QHostAddress $\ast$\hyperlink{classTRItem_42a994228df002a4ab4f0f51df0128d2}{ip\_\-addr}, int \hyperlink{classTRItem_8288ea073bd9d5c3daa68c8f9c782477}{rtt\_\-ms})
+\item 
+\hypertarget{classTRItem_74737631754b0202e1383b9252cfff6a}{
+\hyperlink{classTRItem_74737631754b0202e1383b9252cfff6a}{$\sim$TRItem} ()}
+\label{classTRItem_74737631754b0202e1383b9252cfff6a}
+
+\begin{CompactList}\small\item\em destructor \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTRItem_71c41b17d015ce9e9cb76582b780ff40}{
+\hyperlink{classTRItem_0514afbd69abf71a2d996386a1658c7b}{tri\_\-status} \hyperlink{classTRItem_71c41b17d015ce9e9cb76582b780ff40}{status}}
+\label{classTRItem_71c41b17d015ce9e9cb76582b780ff40}
+
+\begin{CompactList}\small\item\em status for this probe \item\end{CompactList}\item 
+\hypertarget{classTRItem_42a994228df002a4ab4f0f51df0128d2}{
+QHostAddress $\ast$ \hyperlink{classTRItem_42a994228df002a4ab4f0f51df0128d2}{ip\_\-addr}}
+\label{classTRItem_42a994228df002a4ab4f0f51df0128d2}
+
+\begin{CompactList}\small\item\em IPv4 address for this probe. \item\end{CompactList}\item 
+\hypertarget{classTRItem_8288ea073bd9d5c3daa68c8f9c782477}{
+int \hyperlink{classTRItem_8288ea073bd9d5c3daa68c8f9c782477}{rtt\_\-ms}}
+\label{classTRItem_8288ea073bd9d5c3daa68c8f9c782477}
+
+\begin{CompactList}\small\item\em Round Trip Time in milliseconds this probe. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Describes a single probe in a traceroute. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classTRItem_0514afbd69abf71a2d996386a1658c7b}{
+\index{TRItem@{TRItem}!tri\_\-status@{tri\_\-status}}
+\index{tri\_\-status@{tri\_\-status}!TRItem@{TRItem}}
+\subsubsection[tri\_\-status]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf TRItem::tri\_\-status}}}
+\label{classTRItem_0514afbd69abf71a2d996386a1658c7b}
+
+
+traceroute item status 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{replied@{replied}!TRItem@{TRItem}}\index{TRItem@{TRItem}!replied@{replied}}\item[{\em 
+\hypertarget{classTRItem_0514afbd69abf71a2d996386a1658c7b09e662743b1bf38e0feeb00eee57e2b6}{
+replied}
+\label{classTRItem_0514afbd69abf71a2d996386a1658c7b09e662743b1bf38e0feeb00eee57e2b6}
+}]destination host replied, or TTL exceeded ICMP 11/0 \index{timed\_\-out@{timed\_\-out}!TRItem@{TRItem}}\index{TRItem@{TRItem}!timed\_\-out@{timed\_\-out}}\item[{\em 
+\hypertarget{classTRItem_0514afbd69abf71a2d996386a1658c7b95e8f24270cb9566de38298f4bc782fb}{
+timed\_\-out}
+\label{classTRItem_0514afbd69abf71a2d996386a1658c7b95e8f24270cb9566de38298f4bc782fb}
+}]no reply whatsoever \index{host\_\-unreach@{host\_\-unreach}!TRItem@{TRItem}}\index{TRItem@{TRItem}!host\_\-unreach@{host\_\-unreach}}\item[{\em 
+\hypertarget{classTRItem_0514afbd69abf71a2d996386a1658c7bf4e0efe50d8ca1905ea17ae399d7db6a}{
+host\_\-unreach}
+\label{classTRItem_0514afbd69abf71a2d996386a1658c7bf4e0efe50d8ca1905ea17ae399d7db6a}
+}]not used - Host Unreachable ICMP 3/1 \index{netw\_\-unreach@{netw\_\-unreach}!TRItem@{TRItem}}\index{TRItem@{TRItem}!netw\_\-unreach@{netw\_\-unreach}}\item[{\em 
+\hypertarget{classTRItem_0514afbd69abf71a2d996386a1658c7b6decf2f67231014ae4d8ff26fb1c56a7}{
+netw\_\-unreach}
+\label{classTRItem_0514afbd69abf71a2d996386a1658c7b6decf2f67231014ae4d8ff26fb1c56a7}
+}]not used - Network Unreachable ICMP 3/0 \index{proto\_\-unavail@{proto\_\-unavail}!TRItem@{TRItem}}\index{TRItem@{TRItem}!proto\_\-unavail@{proto\_\-unavail}}\item[{\em 
+\hypertarget{classTRItem_0514afbd69abf71a2d996386a1658c7b9894598b07d0cbe203230938d3dcbfd7}{
+proto\_\-unavail}
+\label{classTRItem_0514afbd69abf71a2d996386a1658c7b9894598b07d0cbe203230938d3dcbfd7}
+}]not used - Protocol Unreachable ICMP 3/2 \index{frag\_\-needed@{frag\_\-needed}!TRItem@{TRItem}}\index{TRItem@{TRItem}!frag\_\-needed@{frag\_\-needed}}\item[{\em 
+\hypertarget{classTRItem_0514afbd69abf71a2d996386a1658c7b2632d578bab2c004735ec87920374f1c}{
+frag\_\-needed}
+\label{classTRItem_0514afbd69abf71a2d996386a1658c7b2632d578bab2c004735ec87920374f1c}
+}]not used - Fragmentation Required ICMP 3/4 \end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTRItem_6905eecc9647dcd715ab346e7234ffdc}{
+\index{TRItem@{TRItem}!TRItem@{TRItem}}
+\index{TRItem@{TRItem}!TRItem@{TRItem}}
+\subsubsection[TRItem]{\setlength{\rightskip}{0pt plus 5cm}TRItem::TRItem ({\bf tri\_\-status} {\em status}, \/  QHostAddress $\ast$ {\em ip\_\-addr}, \/  int {\em rtt\_\-ms})}}
+\label{classTRItem_6905eecc9647dcd715ab346e7234ffdc}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em status}]is the probe status \item[{\em ip\_\-addr}]is the IPv4 address \item[{\em rtt\_\-ms}]is the Round Trip Time in milliseconds if known \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+traceroute.h\item 
+traceroute.cpp\end{CompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{classBatchRunDialog}{
+\section{BatchRunDialog Class Reference}
+\label{classBatchRunDialog}\index{BatchRunDialog@{BatchRunDialog}}
+}
+{\tt \#include $<$BatchRunDialog.h$>$}
+
+\subsection*{Signals}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classBatchRunDialog_80b5c170f4a32dfdd3be57ab18e376cf}{tracerouteBatch} (const QString \&batchFilename)
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classBatchRunDialog_39e08a5d575b43830615ccc1e4a28d39}{BatchRunDialog} (QStringList \&trsets, QWidget $\ast$parent=0)
+\end{CompactItemize}
+\subsection*{Private Slots}
+\begin{CompactItemize}
+\item 
+\hypertarget{classBatchRunDialog_b52ece91fa455b57e6d04130bac90c71}{
+void \hyperlink{classBatchRunDialog_b52ece91fa455b57e6d04130bac90c71}{on\_\-buttonBox\_\-accepted} ()}
+\label{classBatchRunDialog_b52ece91fa455b57e6d04130bac90c71}
+
+\begin{CompactList}\small\item\em slot receiving OK-clicked message \item\end{CompactList}\item 
+\hypertarget{classBatchRunDialog_3e1f937ff56b551bf7dea076ceb8c147}{
+void \hyperlink{classBatchRunDialog_3e1f937ff56b551bf7dea076ceb8c147}{on\_\-buttonBox\_\-rejected} ()}
+\label{classBatchRunDialog_3e1f937ff56b551bf7dea076ceb8c147}
+
+\begin{CompactList}\small\item\em slot receiving Cancel-clicked message \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Dialog to select between traceroute batches used by \hyperlink{classMainWindow}{MainWindow} TrGen 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBatchRunDialog_39e08a5d575b43830615ccc1e4a28d39}{
+\index{BatchRunDialog@{BatchRunDialog}!BatchRunDialog@{BatchRunDialog}}
+\index{BatchRunDialog@{BatchRunDialog}!BatchRunDialog@{BatchRunDialog}}
+\subsubsection[BatchRunDialog]{\setlength{\rightskip}{0pt plus 5cm}BatchRunDialog::BatchRunDialog (QStringList \& {\em trsets}, \/  QWidget $\ast$ {\em parent} = {\tt 0})}}
+\label{classBatchRunDialog_39e08a5d575b43830615ccc1e4a28d39}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em trsets}]are the traceroute sets in user-viewable format \item[{\em parent}]is the parent widget \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBatchRunDialog_80b5c170f4a32dfdd3be57ab18e376cf}{
+\index{BatchRunDialog@{BatchRunDialog}!tracerouteBatch@{tracerouteBatch}}
+\index{tracerouteBatch@{tracerouteBatch}!BatchRunDialog@{BatchRunDialog}}
+\subsubsection[tracerouteBatch]{\setlength{\rightskip}{0pt plus 5cm}void BatchRunDialog::tracerouteBatch (const QString \& {\em batchFilename})\hspace{0.3cm}{\tt  \mbox{[}signal\mbox{]}}}}
+\label{classBatchRunDialog_80b5c170f4a32dfdd3be57ab18e376cf}
+
+
+signal emitted when a selection has been made by the user \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em batchFilename}]is the user-viewable (not true) filename \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+BatchRunDialog.h\item 
+BatchRunDialog.cpp\item 
+moc\_\-BatchRunDialog.cpp\end{CompactItemize}

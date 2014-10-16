@@ -1,0 +1,179 @@
+\hypertarget{classIXmapsWizard}{
+\section{IXmapsWizard Class Reference}
+\label{classIXmapsWizard}\index{IXmapsWizard@{IXmapsWizard}}
+}
+{\tt \#include $<$ixmaps-wizard.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \{ \par
+\textbf{Page\_\-Intro}, 
+\textbf{Page\_\-Descript}, 
+\textbf{Page\_\-UserSet}, 
+\textbf{Page\_\-TraceSelect}, 
+\par
+\textbf{Page\_\-TraceRun}, 
+\textbf{Page\_\-TraceStatus}, 
+\textbf{Page\_\-Finish}
+ \}
+\begin{CompactList}\small\item\em identifiers for each page to aid in navigation \item\end{CompactList}\end{CompactItemize}
+\subsection*{Signals}
+\begin{CompactItemize}
+\item 
+\hypertarget{classIXmapsWizard_4ab3765f3e1cfef1ef5d554d089609e3}{
+void \hyperlink{classIXmapsWizard_4ab3765f3e1cfef1ef5d554d089609e3}{cancelTraceroute} ()}
+\label{classIXmapsWizard_4ab3765f3e1cfef1ef5d554d089609e3}
+
+\begin{CompactList}\small\item\em want to cancel the currently running traceroute \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classIXmapsWizard_eb12ce3ab9cfbc2fcd1f7c84adfedea2}{IXmapsWizard} (QWidget $\ast$parent=0)
+\item 
+\hypertarget{classIXmapsWizard_1bf28b23ffc2f940a50d25a16451a1ee}{
+void \textbf{accept} ()}
+\label{classIXmapsWizard_1bf28b23ffc2f940a50d25a16451a1ee}
+
+\item 
+\hypertarget{classIXmapsWizard_d6b66334f498aa74e4bcbfee8e5c860f}{
+int \hyperlink{classIXmapsWizard_d6b66334f498aa74e4bcbfee8e5c860f}{nextId} () const }
+\label{classIXmapsWizard_d6b66334f498aa74e4bcbfee8e5c860f}
+
+\begin{CompactList}\small\item\em specify the page for the Next button to go to \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classIXmapsWizard_98b515903af0f288c66ca50fe43d348f}{
+QSettings \hyperlink{classIXmapsWizard_98b515903af0f288c66ca50fe43d348f}{settings}}
+\label{classIXmapsWizard_98b515903af0f288c66ca50fe43d348f}
+
+\begin{CompactList}\small\item\em maintains persistence of user handle and location \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Slots}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classIXmapsWizard_b064d0cb97a40abc8ea405e7001fcce9}{pageChanged} (int id)
+\begin{CompactList}\small\item\em The \hyperlink{classIXmapsWizard_b064d0cb97a40abc8ea405e7001fcce9}{pageChanged()} slot is called when a new page is to be shown. \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_bc438476fd76c20d235ab754b053eb4d}{
+void \hyperlink{classIXmapsWizard_bc438476fd76c20d235ab754b053eb4d}{customClicked} (int buttonId)}
+\label{classIXmapsWizard_bc438476fd76c20d235ab754b053eb4d}
+
+\begin{CompactList}\small\item\em a custom button was clicked, either TryAgain or Stop \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_536a51454aacd61362ed37d1453a5aa0}{
+void \hyperlink{classIXmapsWizard_536a51454aacd61362ed37d1453a5aa0}{tracerouteFinished} ()}
+\label{classIXmapsWizard_536a51454aacd61362ed37d1453a5aa0}
+
+\begin{CompactList}\small\item\em slot receiving message that a traceroute operation (single host or batch) is done \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_53004c1d08c731223e3531121382f14d}{
+void \hyperlink{classIXmapsWizard_53004c1d08c731223e3531121382f14d}{gotCriticalError} ()}
+\label{classIXmapsWizard_53004c1d08c731223e3531121382f14d}
+
+\begin{CompactList}\small\item\em receive notification of serious problem \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classIXmapsWizard_142598b5e0943b66b8817cc7da82c979}{enableBackNext} (bool enabled)
+\begin{CompactList}\small\item\em allow disabling of Next/Back during traceroutes \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_51affaede8e7b78b01266b5ec95371f2}{
+int \hyperlink{classIXmapsWizard_51affaede8e7b78b01266b5ec95371f2}{get\_\-options} ()}
+\label{classIXmapsWizard_51affaede8e7b78b01266b5ec95371f2}
+
+\begin{CompactList}\small\item\em get look and feel wizard options as integer for debug display \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classIXmapsWizard_0239db228bfaf9529ba77b9bc682699d}{
+int \hyperlink{classIXmapsWizard_0239db228bfaf9529ba77b9bc682699d}{pageNew}}
+\label{classIXmapsWizard_0239db228bfaf9529ba77b9bc682699d}
+
+\begin{CompactList}\small\item\em new page we are going into \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_01b9783bb165bca208d3588506506ec3}{
+int \hyperlink{classIXmapsWizard_01b9783bb165bca208d3588506506ec3}{pageCameFrom}}
+\label{classIXmapsWizard_01b9783bb165bca208d3588506506ec3}
+
+\begin{CompactList}\small\item\em keep track of where we were when going to new page \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_3a964f067babde8ed150b24f437c446d}{
+\hyperlink{classPStatus}{PStatus} \hyperlink{classIXmapsWizard_3a964f067babde8ed150b24f437c446d}{pstat}}
+\label{classIXmapsWizard_3a964f067babde8ed150b24f437c446d}
+
+\begin{CompactList}\small\item\em encapsulate various bits of status \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_be86ebb8795a157f27021696f3545308}{
+\hyperlink{classTrDo}{TrDo} \hyperlink{classIXmapsWizard_be86ebb8795a157f27021696f3545308}{doer}}
+\label{classIXmapsWizard_be86ebb8795a157f27021696f3545308}
+
+\begin{CompactList}\small\item\em actually runs the traceroutes \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_bbbbd3bb857f291c153c1a01e70bd89a}{
+QList$<$ QWizard::WizardButton $>$ \hyperlink{classIXmapsWizard_bbbbd3bb857f291c153c1a01e70bd89a}{normalLayout}}
+\label{classIXmapsWizard_bbbbd3bb857f291c153c1a01e70bd89a}
+
+\begin{CompactList}\small\item\em regular order of the buttons \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_a0ab75eb5719fee6497c445f33b84105}{
+QList$<$ QWizard::WizardButton $>$ \hyperlink{classIXmapsWizard_a0ab75eb5719fee6497c445f33b84105}{stopLayout}}
+\label{classIXmapsWizard_a0ab75eb5719fee6497c445f33b84105}
+
+\begin{CompactList}\small\item\em button order including \char`\"{}Stop\char`\"{} \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_72ab3e6fe33ac5151528bef223967849}{
+QList$<$ QWizard::WizardButton $>$ \hyperlink{classIXmapsWizard_72ab3e6fe33ac5151528bef223967849}{tryAgainLayout}}
+\label{classIXmapsWizard_72ab3e6fe33ac5151528bef223967849}
+
+\begin{CompactList}\small\item\em button order including \char`\"{}Try Again\char`\"{} \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+\hypertarget{classIXmapsWizard_1f0f2195d2c6a47ef44d96a05b278980}{
+class \hyperlink{classIXmapsWizard_1f0f2195d2c6a47ef44d96a05b278980}{TraceSelectWizardPage}}
+\label{classIXmapsWizard_1f0f2195d2c6a47ef44d96a05b278980}
+
+\begin{CompactList}\small\item\em allowed access here \item\end{CompactList}\item 
+\hypertarget{classIXmapsWizard_50d8c93f451b6845ed811e34c1ee8588}{
+class \hyperlink{classIXmapsWizard_50d8c93f451b6845ed811e34c1ee8588}{TraceRunWizardPage}}
+\label{classIXmapsWizard_50d8c93f451b6845ed811e34c1ee8588}
+
+\begin{CompactList}\small\item\em allowed access here \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+IXmaps TrGen Wizard. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIXmapsWizard_eb12ce3ab9cfbc2fcd1f7c84adfedea2}{
+\index{IXmapsWizard@{IXmapsWizard}!IXmapsWizard@{IXmapsWizard}}
+\index{IXmapsWizard@{IXmapsWizard}!IXmapsWizard@{IXmapsWizard}}
+\subsubsection[IXmapsWizard]{\setlength{\rightskip}{0pt plus 5cm}IXmapsWizard::IXmapsWizard (QWidget $\ast$ {\em parent} = {\tt 0})}}
+\label{classIXmapsWizard_eb12ce3ab9cfbc2fcd1f7c84adfedea2}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em parent}]is the parent widget \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIXmapsWizard_142598b5e0943b66b8817cc7da82c979}{
+\index{IXmapsWizard@{IXmapsWizard}!enableBackNext@{enableBackNext}}
+\index{enableBackNext@{enableBackNext}!IXmapsWizard@{IXmapsWizard}}
+\subsubsection[enableBackNext]{\setlength{\rightskip}{0pt plus 5cm}void IXmapsWizard::enableBackNext (bool {\em enabled})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classIXmapsWizard_142598b5e0943b66b8817cc7da82c979}
+
+
+allow disabling of Next/Back during traceroutes 
+
+Enable/disable the Back and Next buttons. During a traceroute, it is not desirable for the user to wander to another page. \hypertarget{classIXmapsWizard_b064d0cb97a40abc8ea405e7001fcce9}{
+\index{IXmapsWizard@{IXmapsWizard}!pageChanged@{pageChanged}}
+\index{pageChanged@{pageChanged}!IXmapsWizard@{IXmapsWizard}}
+\subsubsection[pageChanged]{\setlength{\rightskip}{0pt plus 5cm}void IXmapsWizard::pageChanged (int {\em id})\hspace{0.3cm}{\tt  \mbox{[}private, slot\mbox{]}}}}
+\label{classIXmapsWizard_b064d0cb97a40abc8ea405e7001fcce9}
+
+
+The \hyperlink{classIXmapsWizard_b064d0cb97a40abc8ea405e7001fcce9}{pageChanged()} slot is called when a new page is to be shown. 
+
+The \hyperlink{classIXmapsWizard_b064d0cb97a40abc8ea405e7001fcce9}{pageChanged()} slot is called when a new page is to be shown. It does whatever processing that is required. If the completed page is the User Settings page, the settings are made to persist. From the \hyperlink{classTraceroute}{Traceroute} selection page, make the batch selection sticky, if there is anything entered into the hostname field, do a single traceroute to it, otherwise run the batch referenced by the combo box.
+
+Once the processing is complete, pageCameFrom will then be set to the value of pageNew. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+ixmaps-wizard.h\item 
+ixmaps-wizard.cpp\end{CompactItemize}

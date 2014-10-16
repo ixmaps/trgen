@@ -1,0 +1,138 @@
+\hypertarget{classTrWorkItem}{
+\section{TrWorkItem Class Reference}
+\label{classTrWorkItem}\index{TrWorkItem@{TrWorkItem}}
+}
+{\tt \#include $<$TrWorkItem.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classTrWorkItem_4316e5497fae321cd211ac3cafd60b4d}{TrWorkItem} (const QString \&host, \hyperlink{classTrStatus}{TrStatus} $\ast$\hyperlink{classTrWorkItem_4270cd5b74c069865aff5881900ff307}{tstat}, int \hyperlink{classTrWorkItem_efbff2fd78cb5e3abda6bcc51a70a072}{nprobes}=0)
+\item 
+bool \hyperlink{classTrWorkItem_e95da0459466fe9c4cd30384e75dfc1c}{isResolved} ()
+\begin{CompactList}\small\item\em whether hostname to IP\# resolution worked \item\end{CompactList}\item 
+void \hyperlink{classTrWorkItem_9410f63d30b40f24b452243f1f5f0a48}{parseCanonical} (QByteArray \&trData)
+\item 
+bool \hyperlink{classTrWorkItem_5e3ff6cc58c4411661b93e4280613b43}{formatForServer} (QByteArray \&ba, int private\_\-ip\_\-cnt, const QString \&programVersion)
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrWorkItem_efbff2fd78cb5e3abda6bcc51a70a072}{
+int \hyperlink{classTrWorkItem_efbff2fd78cb5e3abda6bcc51a70a072}{nprobes}}
+\label{classTrWorkItem_efbff2fd78cb5e3abda6bcc51a70a072}
+
+\begin{CompactList}\small\item\em number of probes per hop along the traceroute \item\end{CompactList}\item 
+QVector$<$ QHostAddress $>$ \hyperlink{classTrWorkItem_bec5a48d1d5cf74bb01453ab708e4aeb}{host\_\-addrs}
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrWorkItem_3beaba00037ffa9044bca8b2f0a555eb}{
+QVector$<$ QString $>$ \hyperlink{classTrWorkItem_3beaba00037ffa9044bca8b2f0a555eb}{ip\_\-addrs}}
+\label{classTrWorkItem_3beaba00037ffa9044bca8b2f0a555eb}
+
+\begin{CompactList}\small\item\em one IP address for each hop as a dotted-quad or '$\ast$' if unknown \item\end{CompactList}\item 
+\hypertarget{classTrWorkItem_ce2535ad8bbfedc141dc22926c496dfa}{
+QVector$<$ int $>$ \hyperlink{classTrWorkItem_ce2535ad8bbfedc141dc22926c496dfa}{rtts}}
+\label{classTrWorkItem_ce2535ad8bbfedc141dc22926c496dfa}
+
+\begin{CompactList}\small\item\em flattened 2-dimensional array of Round Trip Times in microseconds \item\end{CompactList}\item 
+\hypertarget{classTrWorkItem_661a2813b20b2b65ddc5de5b155e1b49}{
+QString \hyperlink{classTrWorkItem_661a2813b20b2b65ddc5de5b155e1b49}{trHost}}
+\label{classTrWorkItem_661a2813b20b2b65ddc5de5b155e1b49}
+
+\begin{CompactList}\small\item\em host being trace-routed to as supplied by user/batch file \item\end{CompactList}\item 
+\hypertarget{classTrWorkItem_80fa4a969af4cfcba111a0b8e7fc484b}{
+QHostAddress \hyperlink{classTrWorkItem_80fa4a969af4cfcba111a0b8e7fc484b}{trHostAddress}}
+\label{classTrWorkItem_80fa4a969af4cfcba111a0b8e7fc484b}
+
+\begin{CompactList}\small\item\em trHost resolved to an IP address \item\end{CompactList}\item 
+\hypertarget{classTrWorkItem_4270cd5b74c069865aff5881900ff307}{
+\hyperlink{classTrStatus}{TrStatus} $\ast$ \hyperlink{classTrWorkItem_4270cd5b74c069865aff5881900ff307}{tstat}}
+\label{classTrWorkItem_4270cd5b74c069865aff5881900ff307}
+
+\begin{CompactList}\small\item\em saved copy of argument to \hyperlink{classTrWorkItem}{TrWorkItem} \item\end{CompactList}\item 
+\hypertarget{classTrWorkItem_06e4ade2f71c43a083bbdbbb24f53590}{
+bool \hyperlink{classTrWorkItem_06e4ade2f71c43a083bbdbbb24f53590}{name\_\-ok}}
+\label{classTrWorkItem_06e4ade2f71c43a083bbdbbb24f53590}
+
+\begin{CompactList}\small\item\em whether host resolved or not. Returned by \hyperlink{classTrWorkItem_e95da0459466fe9c4cd30384e75dfc1c}{isResolved()}. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+A work item describing a single traceroute to be done, a container for it's results, and to be submitted to the server. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTrWorkItem_4316e5497fae321cd211ac3cafd60b4d}{
+\index{TrWorkItem@{TrWorkItem}!TrWorkItem@{TrWorkItem}}
+\index{TrWorkItem@{TrWorkItem}!TrWorkItem@{TrWorkItem}}
+\subsubsection[TrWorkItem]{\setlength{\rightskip}{0pt plus 5cm}TrWorkItem::TrWorkItem (const QString \& {\em host}, \/  {\bf TrStatus} $\ast$ {\em tstat}, \/  int {\em nprobes} = {\tt 0})}}
+\label{classTrWorkItem_4316e5497fae321cd211ac3cafd60b4d}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em host}]may be either a hostname or a dotted quad \item[{\em tstat}]is a pointer to a \hyperlink{classTrStatus}{TrStatus} traceroute status object \item[{\em nprobes}]is the number of probes per hop along the traceroute The hostname is resolved.\end{description}
+\end{Desc}
+A work item describing a single traceroute to be done, a container for it's results, and to be submitted to the server. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTrWorkItem_e95da0459466fe9c4cd30384e75dfc1c}{
+\index{TrWorkItem@{TrWorkItem}!isResolved@{isResolved}}
+\index{isResolved@{isResolved}!TrWorkItem@{TrWorkItem}}
+\subsubsection[isResolved]{\setlength{\rightskip}{0pt plus 5cm}bool TrWorkItem::isResolved ()}}
+\label{classTrWorkItem_e95da0459466fe9c4cd30384e75dfc1c}
+
+
+whether hostname to IP\# resolution worked 
+
+The hostname supplied to the ctor. needs to have been resolved as an IPv4 address in order to proceed. Tell if this is the case. \hypertarget{classTrWorkItem_9410f63d30b40f24b452243f1f5f0a48}{
+\index{TrWorkItem@{TrWorkItem}!parseCanonical@{parseCanonical}}
+\index{parseCanonical@{parseCanonical}!TrWorkItem@{TrWorkItem}}
+\subsubsection[parseCanonical]{\setlength{\rightskip}{0pt plus 5cm}void TrWorkItem::parseCanonical (QByteArray \& {\em trData})}}
+\label{classTrWorkItem_9410f63d30b40f24b452243f1f5f0a48}
+
+
+parse traceroute output \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em trData}]is the output in canonical format from a traceroute doer program \end{description}
+\end{Desc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000005}{Todo}]\{ document the format \} \end{Desc}
+Parse the output from the traceroute doer process. This output is in the canonical format as produced by the wmtrcmd or trparse programs, and is a simple table of IPv4 addresses and Round Trip Times in microseconds. \hypertarget{classTrWorkItem_5e3ff6cc58c4411661b93e4280613b43}{
+\index{TrWorkItem@{TrWorkItem}!formatForServer@{formatForServer}}
+\index{formatForServer@{formatForServer}!TrWorkItem@{TrWorkItem}}
+\subsubsection[formatForServer]{\setlength{\rightskip}{0pt plus 5cm}bool TrWorkItem::formatForServer (QByteArray \& {\em ba}, \/  int {\em private\_\-ip\_\-cnt}, \/  const QString \& {\em programVersion})}}
+\label{classTrWorkItem_5e3ff6cc58c4411661b93e4280613b43}
+
+
+format a traceroute for submission to the server \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ba}]is an empty caller-supplied buffer for the result \item[{\em private\_\-ip\_\-cnt}]is the number of private (RFC 1918) addresses to leave off the submitted traceroute \item[{\em programVersion}]is the program version \end{description}
+\end{Desc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000006}{Todo}]\{ move private\_\-ip\_\-cnt out of the caller to reduce degree of coupling \} \end{Desc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000006}{Todo}]\{ document the format \} \end{Desc}
+Format the traceroute for submission to the server. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classTrWorkItem_bec5a48d1d5cf74bb01453ab708e4aeb}{
+\index{TrWorkItem@{TrWorkItem}!host\_\-addrs@{host\_\-addrs}}
+\index{host\_\-addrs@{host\_\-addrs}!TrWorkItem@{TrWorkItem}}
+\subsubsection[host\_\-addrs]{\setlength{\rightskip}{0pt plus 5cm}QVector$<$QHostAddress$>$ {\bf TrWorkItem::host\_\-addrs}}}
+\label{classTrWorkItem_bec5a48d1d5cf74bb01453ab708e4aeb}
+
+
+\begin{Desc}
+\item[\hyperlink{todo__todo000008}{Todo}]\{ encapsulate host\_\-addrs with a method to apply privacy to it \} \end{Desc}
+internal representation of IP addresses for each hop 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+TrWorkItem.h\item 
+TrWorkItem.cpp\end{CompactItemize}

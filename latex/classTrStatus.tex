@@ -1,0 +1,264 @@
+\hypertarget{classTrStatus}{
+\section{TrStatus Class Reference}
+\label{classTrStatus}\index{TrStatus@{TrStatus}}
+}
+{\tt \#include $<$TrStatus.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum \hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da5302}{errCode} \{ \par
+\hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da5302c3415fb00f1515e6cfcc42d0774f5eb1}{ERR\_\-UNDEFINED} =  1, 
+\textbf{ERR\_\-NAME\_\-RESOLV\_\-FAIL} =  2, 
+\hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da5302791e538219fe70804d43a86e51cf73c0}{ERR\_\-PROCESS\_\-START\_\-FAIL} =  50, 
+\textbf{ERR\_\-PROCESS\_\-CRASHED}, 
+\par
+\textbf{ERR\_\-PROCESS\_\-TIMEDOUT}, 
+\textbf{ERR\_\-PROCESS\_\-WRITE\_\-ERR}, 
+\textbf{ERR\_\-PROCESS\_\-READ\_\-ERR}, 
+\textbf{ERR\_\-PROCESS\_\-UNKNOWN\_\-ERR}, 
+\par
+\hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da5302942bd0dd29fcfa7e4566a28bbf969393}{ERR\_\-PROCESS\_\-RC\_\-BASE} =  100, 
+\hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da5302257b1efa4186c926bd152bbee68c2c4f}{ERR\_\-NO\_\-PUBLIC\_\-HOPS} =  190, 
+\hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da53028c1c3321a69ca2c1b6dcf5be3b0e1a79}{ERR\_\-LE\_\-MISSING\_\-DATA} =  191, 
+\hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da53026be2333c602f24072eec6688160f5e32}{ERR\_\-HOST\_\-NOT\_\-FOUND} =  200, 
+\par
+\textbf{ERR\_\-CONNECTION\_\-REFUSED}, 
+\textbf{ERR\_\-UNEXPECTED\_\-CLOSE}, 
+\textbf{ERR\_\-INVALID\_\-RESPONSE\_\-HEADER}, 
+\textbf{ERR\_\-WRONG\_\-CONTENT\_\-LENGTH}, 
+\par
+\textbf{ERR\_\-REQUEST\_\-ABORTED}, 
+\textbf{ERR\_\-PROXY\_\-AUTH\_\-REQ}, 
+\textbf{ERR\_\-AUTH\_\-REQ}, 
+\textbf{ERR\_\-UNKNOWN\_\-CONNECT\_\-ERR}, 
+\par
+\textbf{ERR\_\-SUBMIT\_\-TIMEOUT}, 
+\hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da5302d82874b4be3ee405df340a92f763161e}{ERR\_\-SERVER\_\-POST\_\-FAILED} =  250, 
+\hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da5302d9e3f200861eaf809811bde85ee56520}{ERR\_\-SERVER\_\-MIN\_\-CODE} =  300, 
+\textbf{ERR\_\-SERVER\_\-MAX\_\-CODE} =  345, 
+\par
+\hyperlink{classTrStatus_366057e7e0cc467a592518e5f0da53025d0359a8465346dafc834a6a048508cc}{ERR\_\-SERVER\_\-FAIL} =  347, 
+\textbf{ERR\_\-SERVER\_\-RANGE\_\-ERR} =  348, 
+\textbf{ERR\_\-SERVER\_\-ERR\_\-BAD\_\-FMT} =  349
+ \}
+\begin{CompactList}\small\item\em map all error codes from different processing phases of a traceroute \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classTrStatus_6679e8c913fe04b4ae96359235119b12}{TrStatus} (const QString \&h\_\-name, bool in\_\-batch, int op\_\-num)
+\item 
+\hypertarget{classTrStatus_a2adb1425bfe29e2303611d3c6687eb7}{
+void \hyperlink{classTrStatus_a2adb1425bfe29e2303611d3c6687eb7}{debugShow} ()}
+\label{classTrStatus_a2adb1425bfe29e2303611d3c6687eb7}
+
+\begin{CompactList}\small\item\em print on debug output \item\end{CompactList}\item 
+void \hyperlink{classTrStatus_cd81c57a0333bfd2733b48773174b890}{finish} (long long \hyperlink{classTrStatus_0a6327dd6f84425d2f90a0a3720d608a}{traceroute\_\-id})
+\item 
+void \hyperlink{classTrStatus_aafd283bd4ab3c0547fab9c3c82bab4f}{setError} (int errNum)
+\item 
+\hypertarget{classTrStatus_ed05db500144e2a57bf5569b5b23e4c0}{
+QString \& \hyperlink{classTrStatus_ed05db500144e2a57bf5569b5b23e4c0}{getErrorText} ()}
+\label{classTrStatus_ed05db500144e2a57bf5569b5b23e4c0}
+
+\begin{CompactList}\small\item\em return a display-ready string for the error \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static QString \& \hyperlink{classTrStatus_c5de091ddb15e288c413b9e846658fd8}{getErrorTextByCode} (int key)
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrStatus_4b9da6f5da534b2099d874f727aa8588}{
+QString \hyperlink{classTrStatus_4b9da6f5da534b2099d874f727aa8588}{hostname}}
+\label{classTrStatus_4b9da6f5da534b2099d874f727aa8588}
+
+\begin{CompactList}\small\item\em either a Fully Qualified Domain Name or dotted quad \item\end{CompactList}\item 
+\hypertarget{classTrStatus_06d17ca80c2fbccdc277ef622ed8bba6}{
+int \hyperlink{classTrStatus_06d17ca80c2fbccdc277ef622ed8bba6}{nhops}}
+\label{classTrStatus_06d17ca80c2fbccdc277ef622ed8bba6}
+
+\begin{CompactList}\small\item\em number of hops in the traceroute \item\end{CompactList}\item 
+\hypertarget{classTrStatus_0c123c43201bf027083df0c805767698}{
+int \hyperlink{classTrStatus_0c123c43201bf027083df0c805767698}{hosts\_\-responding}}
+\label{classTrStatus_0c123c43201bf027083df0c805767698}
+
+\begin{CompactList}\small\item\em number of hosts along the path that responded \item\end{CompactList}\item 
+\hypertarget{classTrStatus_368061a7714de48ba7d1d19f40ba1a88}{
+bool \hyperlink{classTrStatus_368061a7714de48ba7d1d19f40ba1a88}{host\_\-responded}}
+\label{classTrStatus_368061a7714de48ba7d1d19f40ba1a88}
+
+\begin{CompactList}\small\item\em destination host gave a response \item\end{CompactList}\item 
+\hypertarget{classTrStatus_83bd8e13b56c3faac9649abe37df3d8d}{
+bool \hyperlink{classTrStatus_83bd8e13b56c3faac9649abe37df3d8d}{consistent}}
+\label{classTrStatus_83bd8e13b56c3faac9649abe37df3d8d}
+
+\begin{CompactList}\small\item\em each hop got replies from at most one host \item\end{CompactList}\item 
+\hypertarget{classTrStatus_a06f7075c300584d41a50f5904e68a28}{
+bool \hyperlink{classTrStatus_a06f7075c300584d41a50f5904e68a28}{part\_\-batch}}
+\label{classTrStatus_a06f7075c300584d41a50f5904e68a28}
+
+\begin{CompactList}\small\item\em traceroute was part of a batch \item\end{CompactList}\item 
+\hypertarget{classTrStatus_67f6a623c53b7352ade73e79b41775dd}{
+int \hyperlink{classTrStatus_67f6a623c53b7352ade73e79b41775dd}{op\_\-number}}
+\label{classTrStatus_67f6a623c53b7352ade73e79b41775dd}
+
+\begin{CompactList}\small\item\em increments each time a single trace or batch is requested \item\end{CompactList}\item 
+\hypertarget{classTrStatus_bb17c194ee0cc6103fe6ff0cb4f3d312}{
+int \hyperlink{classTrStatus_bb17c194ee0cc6103fe6ff0cb4f3d312}{elapsed\_\-time}}
+\label{classTrStatus_bb17c194ee0cc6103fe6ff0cb4f3d312}
+
+\begin{CompactList}\small\item\em time in ms to do the entire traceroute \item\end{CompactList}\item 
+\hypertarget{classTrStatus_0a6327dd6f84425d2f90a0a3720d608a}{
+long long \hyperlink{classTrStatus_0a6327dd6f84425d2f90a0a3720d608a}{traceroute\_\-id}}
+\label{classTrStatus_0a6327dd6f84425d2f90a0a3720d608a}
+
+\begin{CompactList}\small\item\em $>$0 is the ID in the database, $<$0 is an error code \item\end{CompactList}\item 
+\hypertarget{classTrStatus_e622b86041245096fa37df5b7c58c530}{
+QString \hyperlink{classTrStatus_e622b86041245096fa37df5b7c58c530}{errorMsg}}
+\label{classTrStatus_e622b86041245096fa37df5b7c58c530}
+
+\begin{CompactList}\small\item\em from database submission \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrStatus_888d52c5083943e68fceb80c80fbbdc7}{
+void \hyperlink{classTrStatus_888d52c5083943e68fceb80c80fbbdc7}{setupErrCodeMap} ()}
+\label{classTrStatus_888d52c5083943e68fceb80c80fbbdc7}
+
+\begin{CompactList}\small\item\em run only from first-time ctor. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrStatus_4684f4d71f6c53c635d6bf8aeaea2756}{
+static QTime \hyperlink{classTrStatus_4684f4d71f6c53c635d6bf8aeaea2756}{timer}}
+\label{classTrStatus_4684f4d71f6c53c635d6bf8aeaea2756}
+
+\begin{CompactList}\small\item\em determines elapsed time for each operation \item\end{CompactList}\item 
+\hypertarget{classTrStatus_db5a5bf8eab67be71eede7971d4fd572}{
+static QMap$<$ int, QString $>$ $\ast$ \hyperlink{classTrStatus_db5a5bf8eab67be71eede7971d4fd572}{errCodeMap} = 0}
+\label{classTrStatus_db5a5bf8eab67be71eede7971d4fd572}
+
+\begin{CompactList}\small\item\em from error code to text string \item\end{CompactList}\item 
+\hypertarget{classTrStatus_76a299bf7c90c3d22f31ffdbd5b8e1e5}{
+static QString \hyperlink{classTrStatus_76a299bf7c90c3d22f31ffdbd5b8e1e5}{defaultErrText}}
+\label{classTrStatus_76a299bf7c90c3d22f31ffdbd5b8e1e5}
+
+\begin{CompactList}\small\item\em if errCodeMap undefined, fall back to this \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Status for a single traceroute. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da5302}{
+\index{TrStatus@{TrStatus}!errCode@{errCode}}
+\index{errCode@{errCode}!TrStatus@{TrStatus}}
+\subsubsection[errCode]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf TrStatus::errCode}}}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da5302}
+
+
+map all error codes from different processing phases of a traceroute 
+
+Per-traceroute error codes are between 1 and 499. General error codes start at 500. The ordering of the bunches of error numbers is roughly in order of the steps done to process a traceroute \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{ERR\_\-UNDEFINED@{ERR\_\-UNDEFINED}!TrStatus@{TrStatus}}\index{TrStatus@{TrStatus}!ERR\_\-UNDEFINED@{ERR\_\-UNDEFINED}}\item[{\em 
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da5302c3415fb00f1515e6cfcc42d0774f5eb1}{
+ERR\_\-UNDEFINED}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da5302c3415fb00f1515e6cfcc42d0774f5eb1}
+}]catch-all error code \index{ERR\_\-PROCESS\_\-START\_\-FAIL@{ERR\_\-PROCESS\_\-START\_\-FAIL}!TrStatus@{TrStatus}}\index{TrStatus@{TrStatus}!ERR\_\-PROCESS\_\-START\_\-FAIL@{ERR\_\-PROCESS\_\-START\_\-FAIL}}\item[{\em 
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da5302791e538219fe70804d43a86e51cf73c0}{
+ERR\_\-PROCESS\_\-START\_\-FAIL}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da5302791e538219fe70804d43a86e51cf73c0}
+}]child process control \index{ERR\_\-PROCESS\_\-RC\_\-BASE@{ERR\_\-PROCESS\_\-RC\_\-BASE}!TrStatus@{TrStatus}}\index{TrStatus@{TrStatus}!ERR\_\-PROCESS\_\-RC\_\-BASE@{ERR\_\-PROCESS\_\-RC\_\-BASE}}\item[{\em 
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da5302942bd0dd29fcfa7e4566a28bbf969393}{
+ERR\_\-PROCESS\_\-RC\_\-BASE}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da5302942bd0dd29fcfa7e4566a28bbf969393}
+}]map exit codes from child process starting here \index{ERR\_\-NO\_\-PUBLIC\_\-HOPS@{ERR\_\-NO\_\-PUBLIC\_\-HOPS}!TrStatus@{TrStatus}}\index{TrStatus@{TrStatus}!ERR\_\-NO\_\-PUBLIC\_\-HOPS@{ERR\_\-NO\_\-PUBLIC\_\-HOPS}}\item[{\em 
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da5302257b1efa4186c926bd152bbee68c2c4f}{
+ERR\_\-NO\_\-PUBLIC\_\-HOPS}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da5302257b1efa4186c926bd152bbee68c2c4f}
+}]no public hops can happen if traceroute entirely within local address space \index{ERR\_\-LE\_\-MISSING\_\-DATA@{ERR\_\-LE\_\-MISSING\_\-DATA}!TrStatus@{TrStatus}}\index{TrStatus@{TrStatus}!ERR\_\-LE\_\-MISSING\_\-DATA@{ERR\_\-LE\_\-MISSING\_\-DATA}}\item[{\em 
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da53028c1c3321a69ca2c1b6dcf5be3b0e1a79}{
+ERR\_\-LE\_\-MISSING\_\-DATA}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da53028c1c3321a69ca2c1b6dcf5be3b0e1a79}
+}]logic error! \index{ERR\_\-HOST\_\-NOT\_\-FOUND@{ERR\_\-HOST\_\-NOT\_\-FOUND}!TrStatus@{TrStatus}}\index{TrStatus@{TrStatus}!ERR\_\-HOST\_\-NOT\_\-FOUND@{ERR\_\-HOST\_\-NOT\_\-FOUND}}\item[{\em 
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da53026be2333c602f24072eec6688160f5e32}{
+ERR\_\-HOST\_\-NOT\_\-FOUND}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da53026be2333c602f24072eec6688160f5e32}
+}]traceroute submission to server via HTTP \index{ERR\_\-SERVER\_\-POST\_\-FAILED@{ERR\_\-SERVER\_\-POST\_\-FAILED}!TrStatus@{TrStatus}}\index{TrStatus@{TrStatus}!ERR\_\-SERVER\_\-POST\_\-FAILED@{ERR\_\-SERVER\_\-POST\_\-FAILED}}\item[{\em 
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da5302d82874b4be3ee405df340a92f763161e}{
+ERR\_\-SERVER\_\-POST\_\-FAILED}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da5302d82874b4be3ee405df340a92f763161e}
+}]\hyperlink{classTrHttp_a1a518e5b0ba5501345888512a74199c}{TrHttp::finished()} with error. \index{ERR\_\-SERVER\_\-MIN\_\-CODE@{ERR\_\-SERVER\_\-MIN\_\-CODE}!TrStatus@{TrStatus}}\index{TrStatus@{TrStatus}!ERR\_\-SERVER\_\-MIN\_\-CODE@{ERR\_\-SERVER\_\-MIN\_\-CODE}}\item[{\em 
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da5302d9e3f200861eaf809811bde85ee56520}{
+ERR\_\-SERVER\_\-MIN\_\-CODE}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da5302d9e3f200861eaf809811bde85ee56520}
+}]map CGI program error codes into this space \index{ERR\_\-SERVER\_\-FAIL@{ERR\_\-SERVER\_\-FAIL}!TrStatus@{TrStatus}}\index{TrStatus@{TrStatus}!ERR\_\-SERVER\_\-FAIL@{ERR\_\-SERVER\_\-FAIL}}\item[{\em 
+\hypertarget{classTrStatus_366057e7e0cc467a592518e5f0da53025d0359a8465346dafc834a6a048508cc}{
+ERR\_\-SERVER\_\-FAIL}
+\label{classTrStatus_366057e7e0cc467a592518e5f0da53025d0359a8465346dafc834a6a048508cc}
+}]CGI program emitting bad syntax. \end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTrStatus_6679e8c913fe04b4ae96359235119b12}{
+\index{TrStatus@{TrStatus}!TrStatus@{TrStatus}}
+\index{TrStatus@{TrStatus}!TrStatus@{TrStatus}}
+\subsubsection[TrStatus]{\setlength{\rightskip}{0pt plus 5cm}TrStatus::TrStatus (const QString \& {\em h\_\-name}, \/  bool {\em in\_\-batch}, \/  int {\em op\_\-num})}}
+\label{classTrStatus_6679e8c913fe04b4ae96359235119b12}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em h\_\-name}]is the hostname for the traceroute \item[{\em in\_\-batch}]is set iff the traceroute is part of a batch \item[{\em op\_\-num}]is the sequential operation number \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classTrStatus_cd81c57a0333bfd2733b48773174b890}{
+\index{TrStatus@{TrStatus}!finish@{finish}}
+\index{finish@{finish}!TrStatus@{TrStatus}}
+\subsubsection[finish]{\setlength{\rightskip}{0pt plus 5cm}void TrStatus::finish (long long {\em traceroute\_\-id})}}
+\label{classTrStatus_cd81c57a0333bfd2733b48773174b890}
+
+
+Set the traceroute\_\-id learnt from the server. The total elapsed time for the operation is also determined. \begin{Desc}
+\item[See also:]\hyperlink{classTrStatus_aafd283bd4ab3c0547fab9c3c82bab4f}{setError()} \end{Desc}
+\hypertarget{classTrStatus_aafd283bd4ab3c0547fab9c3c82bab4f}{
+\index{TrStatus@{TrStatus}!setError@{setError}}
+\index{setError@{setError}!TrStatus@{TrStatus}}
+\subsubsection[setError]{\setlength{\rightskip}{0pt plus 5cm}void TrStatus::setError (int {\em errNum})}}
+\label{classTrStatus_aafd283bd4ab3c0547fab9c3c82bab4f}
+
+
+set the error code for this traceroute \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em errNum}]is the error number\end{description}
+\end{Desc}
+Set the error status code for this traceroute. The negative of the error code is stored into the traceroute\_\-id field which under normal circumstances should always be positive. \begin{Desc}
+\item[See also:]\hyperlink{classTrStatus_cd81c57a0333bfd2733b48773174b890}{finish()} \end{Desc}
+\hypertarget{classTrStatus_c5de091ddb15e288c413b9e846658fd8}{
+\index{TrStatus@{TrStatus}!getErrorTextByCode@{getErrorTextByCode}}
+\index{getErrorTextByCode@{getErrorTextByCode}!TrStatus@{TrStatus}}
+\subsubsection[getErrorTextByCode]{\setlength{\rightskip}{0pt plus 5cm}QString \& TrStatus::getErrorTextByCode (int {\em key})\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{classTrStatus_c5de091ddb15e288c413b9e846658fd8}
+
+
+return a display-ready string for an error code \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em key}]is our error code \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+TrStatus.h\item 
+TrStatus.cpp\end{CompactItemize}

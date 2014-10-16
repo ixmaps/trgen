@@ -1,0 +1,149 @@
+\hypertarget{classServerComm}{
+\section{ServerComm Class Reference}
+\label{classServerComm}\index{ServerComm@{ServerComm}}
+}
+{\tt \#include $<$ServerComm.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classServerComm_a8fadc823665d05f8c7d9f577e2c02d8}{ServerComm} (QWidget $\ast$\hyperlink{classServerComm_b54032885f5525793add53721382471e}{owner})
+\item 
+bool \hyperlink{classServerComm_b93e71f0a8ce1f2eaf18c331a3112722}{getTrSets} (QStringList \&trsets, bool popupOnError=true)
+\item 
+bool \hyperlink{classServerComm_b3918ae914534b6df5566c5ddb7059cf}{fetchBatch} (const QString \&filename, QBuffer \&buf, bool popupOnError=true)
+\item 
+bool \hyperlink{classServerComm_b7e0486d46e28e2bf8847e770916d98d}{submitTraceroute} (const char $\ast$post\_\-data, \hyperlink{classTrStatus}{TrStatus} $\ast$tstat, bool popupOnError=true)
+\end{CompactItemize}
+\subsection*{Private Slots}
+\begin{CompactItemize}
+\item 
+void \hyperlink{classServerComm_d1099a80e50d54d10f9d45988c5a6b6b}{trResultsSubmitted} (bool error)
+\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classServerComm_90d964e211713d3b299dabd61708a294}{msgConnFailure} (QHttp::Error err, bool popupOnError)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classServerComm_b54032885f5525793add53721382471e}{
+QWidget $\ast$ \hyperlink{classServerComm_b54032885f5525793add53721382471e}{owner}}
+\label{classServerComm_b54032885f5525793add53721382471e}
+
+\begin{CompactList}\small\item\em parent widget for the pop-up \item\end{CompactList}\item 
+\hypertarget{classServerComm_9f449f3b4a2de13957b5bded20ef3437}{
+bool \hyperlink{classServerComm_9f449f3b4a2de13957b5bded20ef3437}{subm\_\-waiting\_\-completion}}
+\label{classServerComm_9f449f3b4a2de13957b5bded20ef3437}
+
+\begin{CompactList}\small\item\em waiting for traceroute submission to complete \item\end{CompactList}\item 
+bool \hyperlink{classServerComm_060b1a2c01b923b17dc8d9d3236be5a1}{subm\_\-error\_\-status}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Server Communication. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classServerComm_a8fadc823665d05f8c7d9f577e2c02d8}{
+\index{ServerComm@{ServerComm}!ServerComm@{ServerComm}}
+\index{ServerComm@{ServerComm}!ServerComm@{ServerComm}}
+\subsubsection[ServerComm]{\setlength{\rightskip}{0pt plus 5cm}ServerComm::ServerComm (QWidget $\ast$ {\em owner})}}
+\label{classServerComm_a8fadc823665d05f8c7d9f577e2c02d8}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em owner}]is the high-level widget to be the parent for pop-ups \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classServerComm_b93e71f0a8ce1f2eaf18c331a3112722}{
+\index{ServerComm@{ServerComm}!getTrSets@{getTrSets}}
+\index{getTrSets@{getTrSets}!ServerComm@{ServerComm}}
+\subsubsection[getTrSets]{\setlength{\rightskip}{0pt plus 5cm}bool ServerComm::getTrSets (QStringList \& {\em trsets}, \/  bool {\em popupOnError} = {\tt true})}}
+\label{classServerComm_b93e71f0a8ce1f2eaf18c331a3112722}
+
+
+get list of the available trsets from the server \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em trsets}]receives the list \item[{\em popupOnError}]determines whether an error generates a pop-up window \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]true iff the operation succeeded\end{Desc}
+Do an HTTP GET of the directory on the server that has the available traceroute sets. The directory listing is parsed for links, and these are appended to the trsets vector. \hypertarget{classServerComm_b3918ae914534b6df5566c5ddb7059cf}{
+\index{ServerComm@{ServerComm}!fetchBatch@{fetchBatch}}
+\index{fetchBatch@{fetchBatch}!ServerComm@{ServerComm}}
+\subsubsection[fetchBatch]{\setlength{\rightskip}{0pt plus 5cm}bool ServerComm::fetchBatch (const QString \& {\em filename}, \/  QBuffer \& {\em buf}, \/  bool {\em popupOnError} = {\tt true})}}
+\label{classServerComm_b3918ae914534b6df5566c5ddb7059cf}
+
+
+retrieve a file from the trsets directory on the server \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]is the true filename on the server \item[{\em buf}]receives the file content \item[{\em popupOnError}]determines whether an error generates a pop-up window \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]true iff the operation succeeded\end{Desc}
+Fetch a trset batch file from the server. \hypertarget{classServerComm_b7e0486d46e28e2bf8847e770916d98d}{
+\index{ServerComm@{ServerComm}!submitTraceroute@{submitTraceroute}}
+\index{submitTraceroute@{submitTraceroute}!ServerComm@{ServerComm}}
+\subsubsection[submitTraceroute]{\setlength{\rightskip}{0pt plus 5cm}bool ServerComm::submitTraceroute (const char $\ast$ {\em post\_\-data}, \/  {\bf TrStatus} $\ast$ {\em tstat}, \/  bool {\em popupOnError} = {\tt true})}}
+\label{classServerComm_b7e0486d46e28e2bf8847e770916d98d}
+
+
+submit traceroute data to the server \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em post\_\-data}]is the string of data to be sent \item[{\em tstat}]is the traceroute status object to be updated \item[{\em popupOnError}]determines whether an error generates a pop-up window \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]true iff the operation succeeded\end{Desc}
+Submit a traceroute formatted as HTTP POST data to the server. \hypertarget{classServerComm_d1099a80e50d54d10f9d45988c5a6b6b}{
+\index{ServerComm@{ServerComm}!trResultsSubmitted@{trResultsSubmitted}}
+\index{trResultsSubmitted@{trResultsSubmitted}!ServerComm@{ServerComm}}
+\subsubsection[trResultsSubmitted]{\setlength{\rightskip}{0pt plus 5cm}void ServerComm::trResultsSubmitted (bool {\em error})\hspace{0.3cm}{\tt  \mbox{[}private, slot\mbox{]}}}}
+\label{classServerComm_d1099a80e50d54d10f9d45988c5a6b6b}
+
+
+slot receiving completion message for traceroute submission \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em error}]is set if there was an error submitting the traceroute to the server \end{description}
+\end{Desc}
+\hypertarget{classServerComm_90d964e211713d3b299dabd61708a294}{
+\index{ServerComm@{ServerComm}!msgConnFailure@{msgConnFailure}}
+\index{msgConnFailure@{msgConnFailure}!ServerComm@{ServerComm}}
+\subsubsection[msgConnFailure]{\setlength{\rightskip}{0pt plus 5cm}int ServerComm::msgConnFailure (QHttp::Error {\em err}, \/  bool {\em popupOnError})\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classServerComm_90d964e211713d3b299dabd61708a294}
+
+
+map QHttp error codes into IXmaps TrGen error codes \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em err}]is a Qt QHttp::Error code \item[{\em popupOnError}]allows pop-up critical error message box for server connection failures \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the IXmaps TrGen error code \end{Desc}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classServerComm_060b1a2c01b923b17dc8d9d3236be5a1}{
+\index{ServerComm@{ServerComm}!subm\_\-error\_\-status@{subm\_\-error\_\-status}}
+\index{subm\_\-error\_\-status@{subm\_\-error\_\-status}!ServerComm@{ServerComm}}
+\subsubsection[subm\_\-error\_\-status]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf ServerComm::subm\_\-error\_\-status}\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classServerComm_060b1a2c01b923b17dc8d9d3236be5a1}
+
+
+whether the traceroute submission had an error\begin{Desc}
+\item[\hyperlink{todo__todo000002}{Todo}]\{ remove subm\_\-error\_\-status as it isn't used \} \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+ServerComm.h\item 
+ServerComm.cpp\end{CompactItemize}

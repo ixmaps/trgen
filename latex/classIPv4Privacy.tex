@@ -1,0 +1,92 @@
+\hypertarget{classIPv4Privacy}{
+\section{IPv4Privacy Class Reference}
+\label{classIPv4Privacy}\index{IPv4Privacy@{IPv4Privacy}}
+}
+{\tt \#include $<$IPv4Privacy.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classIPv4Privacy_1527628365ad50b068b9fa27159b7ce6}{IPv4Privacy} (int \hyperlink{classIPv4Privacy_3a100b3960950f7732334e3aa3723dc9}{nbits})
+\item 
+int \hyperlink{classIPv4Privacy_253fc1c2a4ab5cf12814cbb04a18f6ec}{apply} (QVector$<$ QHostAddress $>$ \&hav)
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static bool \hyperlink{classIPv4Privacy_cb5f59d88c60a6dc64a3c73ae9f4bcd2}{is\_\-private\_\-ip} (QHostAddress \&ha)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classIPv4Privacy_47d8e232d1587daeafab8bfb7dc052ea}{
+quint32 \hyperlink{classIPv4Privacy_47d8e232d1587daeafab8bfb7dc052ea}{mask}}
+\label{classIPv4Privacy_47d8e232d1587daeafab8bfb7dc052ea}
+
+\begin{CompactList}\small\item\em mask applied to host addresses \item\end{CompactList}\item 
+\hypertarget{classIPv4Privacy_3a100b3960950f7732334e3aa3723dc9}{
+int \hyperlink{classIPv4Privacy_3a100b3960950f7732334e3aa3723dc9}{nbits}}
+\label{classIPv4Privacy_3a100b3960950f7732334e3aa3723dc9}
+
+\begin{CompactList}\small\item\em copy of argument to constructor \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classIPv4Privacy_0244add050af304dcc2b33266b8a592e}{
+static QVector$<$ QPair$<$ QHostAddress, int $>$ $>$ $\ast$ \hyperlink{classIPv4Privacy_0244add050af304dcc2b33266b8a592e}{privs} = 0}
+\label{classIPv4Privacy_0244add050af304dcc2b33266b8a592e}
+
+\begin{CompactList}\small\item\em singleton to be created by first invocation of ctor \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Enforce obfuscation of first hop address within public IP address space. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIPv4Privacy_1527628365ad50b068b9fa27159b7ce6}{
+\index{IPv4Privacy@{IPv4Privacy}!IPv4Privacy@{IPv4Privacy}}
+\index{IPv4Privacy@{IPv4Privacy}!IPv4Privacy@{IPv4Privacy}}
+\subsubsection[IPv4Privacy]{\setlength{\rightskip}{0pt plus 5cm}IPv4Privacy::IPv4Privacy (int {\em nbits})}}
+\label{classIPv4Privacy_1527628365ad50b068b9fa27159b7ce6}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em nbits}]is the number of low-order bits to mask off of the first hop in public IPv4 address space.\end{description}
+\end{Desc}
+Set the number of privacy bits and associated mask. Compile a list of all networks deemed to be non-public. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classIPv4Privacy_253fc1c2a4ab5cf12814cbb04a18f6ec}{
+\index{IPv4Privacy@{IPv4Privacy}!apply@{apply}}
+\index{apply@{apply}!IPv4Privacy@{IPv4Privacy}}
+\subsubsection[apply]{\setlength{\rightskip}{0pt plus 5cm}int IPv4Privacy::apply (QVector$<$ QHostAddress $>$ \& {\em hav})}}
+\label{classIPv4Privacy_253fc1c2a4ab5cf12814cbb04a18f6ec}
+
+
+apply the privacy policy to the traceroute \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em hav}]is a vector of host addresses in the traceroute \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the number of host addresses that occur before the first public hop\end{Desc}
+Apply the privacy policy. The first hop in public IPv4 address space is identified. All IP addresses in the same subnet defined by that hop and the number of bits in the privacy mask have their low-order bits set to zero. The number of non-public IP addresses in the traceroute that occur before the first public hop is returned, so that the caller may omit them from the reported traceroute. \hypertarget{classIPv4Privacy_cb5f59d88c60a6dc64a3c73ae9f4bcd2}{
+\index{IPv4Privacy@{IPv4Privacy}!is\_\-private\_\-ip@{is\_\-private\_\-ip}}
+\index{is\_\-private\_\-ip@{is\_\-private\_\-ip}!IPv4Privacy@{IPv4Privacy}}
+\subsubsection[is\_\-private\_\-ip]{\setlength{\rightskip}{0pt plus 5cm}bool IPv4Privacy::is\_\-private\_\-ip (QHostAddress \& {\em ha})\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{classIPv4Privacy_cb5f59d88c60a6dc64a3c73ae9f4bcd2}
+
+
+tell if a host address is not in public IPv4 space \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ha}]is the host address \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+IPv4Privacy.h\item 
+IPv4Privacy.cpp\end{CompactItemize}

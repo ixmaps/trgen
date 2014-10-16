@@ -1,0 +1,115 @@
+\hypertarget{classTrStatBrowser}{
+\section{TrStatBrowser Class Reference}
+\label{classTrStatBrowser}\index{TrStatBrowser@{TrStatBrowser}}
+}
+{\tt \#include $<$TrStatBrowser.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classTrStatBrowser_e7430d311eb6ee13d5e4d75a4f21d29b}{TrStatBrowser} (QWidget $\ast$parent=0)
+\item 
+void \hyperlink{classTrStatBrowser_55228e4f43413c06cd97a8d1fb36f074}{renderHistory} (QList$<$ \hyperlink{classTrStatus}{TrStatus} $\ast$ $>$ $\ast$history, int fontSize=10)
+\begin{CompactList}\small\item\em display the status of all traceroutes most recent first \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Types}
+\begin{CompactItemize}
+\item 
+enum \{ \par
+\hyperlink{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e86034a9941816e8e9c7a678d1426435f6a25b}{colHost} = 0, 
+\hyperlink{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e860348d8e0b7336131317fef3a3c9491f44d0}{colResponseCount}, 
+\hyperlink{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e860346d7cfac00f81b94e568c5bee25de1837}{colElapsed}, 
+\hyperlink{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e8603457c5654c2085e8c7ee16a30019a42867}{colIDError}, 
+\par
+\hyperlink{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e86034fee47e115d2774799f334a7e2bbc5ea6}{colCount}
+ \}
+\begin{CompactList}\small\item\em identify the columns in the table \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrStatBrowser_696ff66afb74e0bce31ef163e0f3af7b}{
+void \hyperlink{classTrStatBrowser_696ff66afb74e0bce31ef163e0f3af7b}{setTableCell} (int row, int col, const QString \&text, const QTextCharFormat \&fmt)}
+\label{classTrStatBrowser_696ff66afb74e0bce31ef163e0f3af7b}
+
+\begin{CompactList}\small\item\em place text with specified format within a table cell \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classTrStatBrowser_27a93a05583e04350746522f96801e46}{
+QTextTable $\ast$ \hyperlink{classTrStatBrowser_27a93a05583e04350746522f96801e46}{table}}
+\label{classTrStatBrowser_27a93a05583e04350746522f96801e46}
+
+\begin{CompactList}\small\item\em one row per traceroute whether single or part of a batch \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Widget to render status history for the current TRGen process. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e86034}{
+\subsubsection["@1]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\tt  \mbox{[}private\mbox{]}}}}
+\label{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e86034}
+
+
+identify the columns in the table 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{colHost@{colHost}!TrStatBrowser@{TrStatBrowser}}\index{TrStatBrowser@{TrStatBrowser}!colHost@{colHost}}\item[{\em 
+\hypertarget{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e86034a9941816e8e9c7a678d1426435f6a25b}{
+colHost}
+\label{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e86034a9941816e8e9c7a678d1426435f6a25b}
+}]hostname or dotted-quad \index{colResponseCount@{colResponseCount}!TrStatBrowser@{TrStatBrowser}}\index{TrStatBrowser@{TrStatBrowser}!colResponseCount@{colResponseCount}}\item[{\em 
+\hypertarget{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e860348d8e0b7336131317fef3a3c9491f44d0}{
+colResponseCount}
+\label{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e860348d8e0b7336131317fef3a3c9491f44d0}
+}]hops responding/total hops \index{colElapsed@{colElapsed}!TrStatBrowser@{TrStatBrowser}}\index{TrStatBrowser@{TrStatBrowser}!colElapsed@{colElapsed}}\item[{\em 
+\hypertarget{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e860346d7cfac00f81b94e568c5bee25de1837}{
+colElapsed}
+\label{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e860346d7cfac00f81b94e568c5bee25de1837}
+}]elapsed time to do the traceroute \index{colIDError@{colIDError}!TrStatBrowser@{TrStatBrowser}}\index{TrStatBrowser@{TrStatBrowser}!colIDError@{colIDError}}\item[{\em 
+\hypertarget{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e8603457c5654c2085e8c7ee16a30019a42867}{
+colIDError}
+\label{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e8603457c5654c2085e8c7ee16a30019a42867}
+}]tracerouteID in database, or an error message \index{colCount@{colCount}!TrStatBrowser@{TrStatBrowser}}\index{TrStatBrowser@{TrStatBrowser}!colCount@{colCount}}\item[{\em 
+\hypertarget{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e86034fee47e115d2774799f334a7e2bbc5ea6}{
+colCount}
+\label{classTrStatBrowser_fcbf6150a14800fac3d2f871b5e86034fee47e115d2774799f334a7e2bbc5ea6}
+}]total column count, must be last \end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTrStatBrowser_e7430d311eb6ee13d5e4d75a4f21d29b}{
+\index{TrStatBrowser@{TrStatBrowser}!TrStatBrowser@{TrStatBrowser}}
+\index{TrStatBrowser@{TrStatBrowser}!TrStatBrowser@{TrStatBrowser}}
+\subsubsection[TrStatBrowser]{\setlength{\rightskip}{0pt plus 5cm}TrStatBrowser::TrStatBrowser (QWidget $\ast$ {\em parent} = {\tt 0})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classTrStatBrowser_e7430d311eb6ee13d5e4d75a4f21d29b}
+
+
+constructor \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em parent}]is the parent widget \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classTrStatBrowser_55228e4f43413c06cd97a8d1fb36f074}{
+\index{TrStatBrowser@{TrStatBrowser}!renderHistory@{renderHistory}}
+\index{renderHistory@{renderHistory}!TrStatBrowser@{TrStatBrowser}}
+\subsubsection[renderHistory]{\setlength{\rightskip}{0pt plus 5cm}void TrStatBrowser::renderHistory (QList$<$ {\bf TrStatus} $\ast$ $>$ $\ast$ {\em history}, \/  int {\em fontSize} = {\tt 10})}}
+\label{classTrStatBrowser_55228e4f43413c06cd97a8d1fb36f074}
+
+
+display the status of all traceroutes most recent first 
+
+Display status for all traceroutes done in this invocation of TrGen. The row(s) for the most recent user-initiated operation, whether a single traceroute to a user-specified host, or a batch, is rendered as bold. \begin{Desc}
+\item[See also:]\hyperlink{classTrStatus_67f6a623c53b7352ade73e79b41775dd}{TrStatus::op\_\-number} \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+TrStatBrowser.h\item 
+TrStatBrowser.cpp\end{CompactItemize}

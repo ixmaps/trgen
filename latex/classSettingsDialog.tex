@@ -1,0 +1,98 @@
+\hypertarget{classSettingsDialog}{
+\section{SettingsDialog Class Reference}
+\label{classSettingsDialog}\index{SettingsDialog@{SettingsDialog}}
+}
+{\tt \#include $<$SettingsDialog.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSettingsDialog_9933956b777b2c0451e9119581cc22fb}{
+\hyperlink{classSettingsDialog_9933956b777b2c0451e9119581cc22fb}{SettingsDialog} (QWidget $\ast$parent=0)}
+\label{classSettingsDialog_9933956b777b2c0451e9119581cc22fb}
+
+\begin{CompactList}\small\item\em constructor \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSettingsDialog_17a7fc8b62855c45e9c52be98956a85e}{
+static const QString $\ast$ \hyperlink{classSettingsDialog_17a7fc8b62855c45e9c52be98956a85e}{getUserName} ()}
+\label{classSettingsDialog_17a7fc8b62855c45e9c52be98956a85e}
+
+\begin{CompactList}\small\item\em get the user's handle from persistent settings storage \item\end{CompactList}\item 
+\hypertarget{classSettingsDialog_4bb2e89baab333e89a21b59cdb2adaf5}{
+static const QString $\ast$ \hyperlink{classSettingsDialog_4bb2e89baab333e89a21b59cdb2adaf5}{getUserLocation} ()}
+\label{classSettingsDialog_4bb2e89baab333e89a21b59cdb2adaf5}
+
+\begin{CompactList}\small\item\em get the user's location from persistent settings storage \item\end{CompactList}\item 
+\hypertarget{classSettingsDialog_b7fc0a40ba7726d41eb217e4ea0dbff0}{
+static void \hyperlink{classSettingsDialog_b7fc0a40ba7726d41eb217e4ea0dbff0}{setupEntryFields} (QObject $\ast$owner, QSettings \&\hyperlink{classSettingsDialog_22a1b1607d5bf39067836cd7efc06270}{settings}, QLineEdit $\ast$userNameEdit, QLineEdit $\ast$yourLocationEdit)}
+\label{classSettingsDialog_b7fc0a40ba7726d41eb217e4ea0dbff0}
+
+\begin{CompactList}\small\item\em setup GUI entry fields for user handle and location, pre-loading them with their current persistent settings \item\end{CompactList}\item 
+\hypertarget{classSettingsDialog_501874ae3971a9682a111ee8590883e2}{
+static void \hyperlink{classSettingsDialog_501874ae3971a9682a111ee8590883e2}{storeEntryFields} (QSettings \&\hyperlink{classSettingsDialog_22a1b1607d5bf39067836cd7efc06270}{settings}, QString \&name, QString \&location)}
+\label{classSettingsDialog_501874ae3971a9682a111ee8590883e2}
+
+\begin{CompactList}\small\item\em make the entered values persistent \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const QString \hyperlink{classSettingsDialog_6bc9a2b185317d57fa8297f67d8a2b24}{SAFE\_\-CHARS}
+\begin{CompactList}\small\item\em only allow these characters to be entered into line edit widgets \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Slots}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSettingsDialog_6fdbfb0c82e95023d2484810c7e36841}{
+void \hyperlink{classSettingsDialog_6fdbfb0c82e95023d2484810c7e36841}{on\_\-buttonBox\_\-accepted} ()}
+\label{classSettingsDialog_6fdbfb0c82e95023d2484810c7e36841}
+
+\begin{CompactList}\small\item\em slot receiving message triggered by clicking OK \item\end{CompactList}\item 
+\hypertarget{classSettingsDialog_6b2d464f2ea14a5ef11f51bea4639093}{
+void \hyperlink{classSettingsDialog_6b2d464f2ea14a5ef11f51bea4639093}{on\_\-buttonBox\_\-rejected} ()}
+\label{classSettingsDialog_6b2d464f2ea14a5ef11f51bea4639093}
+
+\begin{CompactList}\small\item\em slot receiving message triggered by clicking Cancel \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSettingsDialog_124b01312485fef5c9d0094f8821494f}{
+bool \hyperlink{classSettingsDialog_124b01312485fef5c9d0094f8821494f}{eventFilter} (QObject $\ast$, QEvent $\ast$)}
+\label{classSettingsDialog_124b01312485fef5c9d0094f8821494f}
+
+\begin{CompactList}\small\item\em keystroke filter to dis-allow entry of problematic characters \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSettingsDialog_22a1b1607d5bf39067836cd7efc06270}{
+QSettings \hyperlink{classSettingsDialog_22a1b1607d5bf39067836cd7efc06270}{settings}}
+\label{classSettingsDialog_22a1b1607d5bf39067836cd7efc06270}
+
+\begin{CompactList}\small\item\em local settings object to communicate with persistent storage \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Settings dialog box to get user's handle and location. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classSettingsDialog_6bc9a2b185317d57fa8297f67d8a2b24}{
+\index{SettingsDialog@{SettingsDialog}!SAFE\_\-CHARS@{SAFE\_\-CHARS}}
+\index{SAFE\_\-CHARS@{SAFE\_\-CHARS}!SettingsDialog@{SettingsDialog}}
+\subsubsection[SAFE\_\-CHARS]{\setlength{\rightskip}{0pt plus 5cm}const QString {\bf SettingsDialog::SAFE\_\-CHARS}\hspace{0.3cm}{\tt  \mbox{[}static\mbox{]}}}}
+\label{classSettingsDialog_6bc9a2b185317d57fa8297f67d8a2b24}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} "\010" "\011" "\015"
+      " !$*+,-./0123456789:=?ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+\end{verbatim}
+\end{Code}
+only allow these characters to be entered into line edit widgets 
+
+Only allow these characters to be entered into line edit widgets. Also allow backspace (\char`\"{}$\backslash$010\char`\"{}) and tab (\char`\"{}$\backslash$011\char`\"{}) and carriage-return (\char`\"{}$\backslash$015\char`\"{}). Limiting safe characters are a first-line defence against server attacks. Alternatively, we will have to quote them before sending and unquote them on the server. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+SettingsDialog.h\item 
+SettingsDialog.cpp\end{CompactItemize}
